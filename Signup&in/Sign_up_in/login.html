@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Login Interface</title>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <img src="https://static.cambly.com/_next/static/media/guy_on_globe.1786b9db.svg" alt="" id="background">
+    <nav>
+        <a href="#" id="hover">Trang chủ</a>
+        <a href="#" id="hover">Gia sư</a>
+        <a href="#" id="hover">Khoá học</a>
+        <a href="#" id="hover">Tài nguyên học</a>
+    </nav>
+    <!-- SIGN UP -->
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Tạo tài khoản</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <hr> <span>HOẶC</span>
+                <input type="text" placeholder="Tên">
+                <input type="Email" placeholder="Địa chỉ Email">
+                <input type="password" placeholder="Mật khẩu">
+                <button>Đăng ký</button>
+            </form>
+        </div>
+
+        <!-- SIGN IN -->
+        <div class="form-container sign-in">
+            <form>
+                <h1>Đăng nhập</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <!-- <span>Hoặc</span> -->
+                <hr> <span>HOẶC</span>
+                <input type="Email" placeholder="Địa chỉ Email">
+                <input type="password" placeholder="Mật khẩu">
+                <a href="#">Quên mật khẩu?</a>
+                <button>Đăng nhập</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <img src="snapedit_1710079190361.png" alt="" id="logo">
+                    <h1>TUTOR</h1>
+                    <h2>Chào mừng bạn trở lại!</h2>
+                    <p>Đăng nhập ngay để cùng nhau trải nghiệm</p>
+                    <button class="hidden" id="login">Đăng nhập</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <img src="snapedit_1710079190361.png" alt="" id="logo">
+                    <h1>TUTOR, Xin chào!</h1>
+                    <p>Tạo ngay một tài khoản để trải nghiệm trang web của chúng tôi</p>
+                    <button class="hidden" id="register">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
