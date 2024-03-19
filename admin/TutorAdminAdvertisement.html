@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutor Admin Interface Settings</title>
+        <meta name="viewport" content="width=device-width, height=device-height initial-scale=1, maximum-scale=1">
+        <meta charset="utf-8">
+        <meta name="description" content = "Cai dat giao dien quan tri vien">
+        <script src="https://kit.fontawesome.com/6c263578bc.js" crossorigin="anonymous"></script>
+        <script src="admin-navbar.js"></script>
+        <script src="theme-switch.js"></script>
+        <style>
+            @import "style.css";
+        </style>
+    </head>
+    <body id="AdminWebpageSetting">
+        <div id="Adminsidenav" class="sidenav">
+            <ul class="navlist">
+                <li><a href="javascript:void(0)" id ="collapse" style="position: absolute;  display:flex;"><i class="fa-solid fa-xmark"></i></a> <!--collapse sidenav--></li>
+                <li><a href="TutorAdminHome.html"><i class="fa-solid fa-home"></i><p class="des">HOME</p></a></li>
+                <li><a class="active" id = "activetab" style="padding-top:10px;"><i class="fa-solid fa-rectangle-ad"></i><p class="des">CAMPAIGNS</p></a></li>
+                <li><a href="#TutorAdminAccountMan"><i class="fa-solid fa-users"></i><p class="des">ACCOUNTS</p></a></li>
+                <li><a href="#TutorCourses"><i class="fa-solid fa-book"></i><p class="des">COURSES</p></a></li>
+                <li><a href="#TutorDatabase"><i class="fa-solid fa-database"></i><p class="des">DATABASE</p></a></li>
+            </ul>
+            <a href="#TutorCredit"><u style="display: block; position:absolute; bottom:50px; left:5px; font-size: 12px; overflow:hidden" >About</u></a>
+        </div>
+        <div class ="topbar" id="topbar">  <!--top bar-->
+            <a href="javascript:void(0)" id ="switch"><i class="fa-solid fa-angle-right"></i><p style="padding-left:5px; font-weight: 600;">EXPAND</p></a> <!--extend sidenav-->
+            <input type="text" placeholder="Search...">
+            <div class="admincreddropdown">
+                <i class="fa-solid fa-user-tie" id="pfp" style="font-size:20px; text-align:center;"></i>
+                <div class="dropdownlist" id="dropdownlist">
+                    <p id="admin_name">super_user</p>
+                    <a href="javascript:void(0)">Interface
+                        <button type="radio" id="theme_reset">Light</button> <button type="radio"  id="theme_switch" style="padding-left:5px;">Dark</button></a>
+                    <a href="AdminAccount.html">Account<i style="padding-left:6px;" class="fa-solid fa-gear"></i></a>
+                    <a href="#TutorLogIn">Log out <i style="padding-left:6px;" class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+        <p style ="padding-left: 50px; padding-top:50px; font-weight:800; color:red;">Under Construction...</p>
+    </body>
+</html>

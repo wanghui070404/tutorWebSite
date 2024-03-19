@@ -1,56 +1,179 @@
-#AdminWebpageSetting{
+*{
+    padding:0;
+    margin:0;
+}
+/*icon config*/
+.icon::before {
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+/*set body font*/
+body{
+    font-family: Arial;
+    height:100vh;
+    background-color: rgb(210, 210, 210);
+    color: blueviolet;
+} 
+#Adminsidenav{              /*navbar config start here*/
+    height: 100%;
+    width: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-bottom: 20px;
+    padding-left:5px;
+    padding-right:20px;
+    background-color: blueviolet;
+    overflow: hidden;
+    transition: 0.5s ;
+    font-family: verdana;
+    display: flex;
+    z-index:10;
+}
+.sidenav a{
+    text-decoration: none;
+    color: white;
+    padding: 0px;
+    padding-bottom:40px;
+    margin: 10px 15px 10px 8px;
+    display: flex;
+}
+.sidenav a:hover{
+    color:rgb(255, 238, 0);
+}
+.sidenav a p{
+    position: relative;
+    overflow-x: hidden;
+    font-weight: 700;
+    padding-left:20px;
+}
+.sidenav a i{
+    position: flex;
+    padding-left: 0px;
+    font-size: 20px;
+}
+.sidenav a.active{
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(210, 210, 210);
+    padding: 5px 40px 5px 5px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+    color:blueviolet;
+}
+.sidenav a.active:hover{
+    border-style: dotted;
+    border-color: rgb(255, 238, 0);
+    background-color: rgb(84, 84, 84);
+    color:rgb(255, 238, 0);
+}
+#collapse{
+    top: -20px;
+    right: 5px;
+}
+.navlist{
+    list-style: none;
+    position: relative;
+    margin-top:30px;
+}
+.navlist li{
+    padding: 15px 0;
+}                                       /*navbar config end here*/
+#main{                                  /*main content config start here*/
+    position: static;
     display:flex;
     flex-direction: column;
-    margin:0;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    top:0;
+    margin-left: 50px;
+    transition: margin-left 0.5s;
 }
-.dark-mode {
-    --background-color: #333; /* Dark mode background color */
-    --text-color: #fff; /* Dark mode text color */
+.dashboard{
+    display:flex;
+    flex-wrap:wrap;
 }
-
-/* Theme switch styles */
-.theme-switch {
+.topbar{                                        /*top bar styling*/
     position: fixed;
-    top: 10px;
-    right: 10px;
-}
-
-.theme-switch label {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.theme-switch input[type="checkbox"] {
-    display: none;
-}
-
-.slider {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 20px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    left: 2px;
-    bottom: 2px;
+    display:flex;
+    width:100%;
+    height:45px;
+    border-bottom: 1px dashed;
+    z-index:8;
+    margin-left: 50px;
+    transition: margin-left 0.5s;
     background-color: white;
+}
+.topbar input[type=text]{
+    position: absolute;
+    right: 100px;
+    padding: 6px;
+    margin-right:15px;
+    margin-top: 6px;
+    font-size:14px;
+    border: 1px solid;
+    border-radius: 6px;
+}                      
+#switch {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right:10px;
+    padding-bottom:5px;
+    width: fit-content;
+    text-decoration: none;
+    color: blueviolet;
+    float: left;
+    display: flex;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+}
+#switch:hover{
+    background-color: blueviolet;
+    color: rgb(255,238,0);
+}
+#pfp{
+    position:fixed;
+    right:10px;
+    padding: 10px;
+    width:20px;
+    height:20px;
+    vertical-align: middle;
     border-radius: 50%;
-    transition: transform 0.2s ease-in-out;
+    border: 2px solid;
+    z-index: 8;
+    color:blueviolet;
 }
-
-input[type="checkbox"]:checked + .slider:before {
-    transform: translateX(20px);
+#pfp:hover{
+    color: black;
+    background-color: blueviolet;
 }
-
-.slider.round {
-    border-radius: 34px;
+.dropdownlist{
+    display:none;
+    position: absolute;
+    border: 1px solid;
+    right:50px;
+    margin-top:44px;
+    min-width: 100px;
+    z-index: 10;
+    box-shadow: 0px 8px 16px 0px rgb(84, 84, 84);
+    color:blueviolet;
+    border-color: blueviolet;
 }
+.dropdownlist a{
+    padding: 12px 16px;  
+    text-decoration: none;
+    display: block;
+    border: 1px solid;
+}
+.dropdownlist p{
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: 1px solid;
+}
+.dropdownlist a:hover{
+    background-color: blueviolet;
+    color: white;
+    border-color: blueviolet;
+    text-decoration: none;
+}
+.admincreddropdown:hover .dropdownlist{display:block}                                             /*top bar styling*/
