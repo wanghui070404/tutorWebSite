@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tutor Admin Interface</title>
+        <meta name="viewport" content="width=device-width, height=device-height initial-scale=1, maximum-scale=1">
+        <meta charset="utf-8">
+        <meta name="description" content = "Giao dien quan tri cua tutor">
+        <script src="https://kit.fontawesome.com/6c263578bc.js" crossorigin="anonymous"></script>
+        <script src="admin-navbar.js"></script>
+        <style>
+            @import "style.css";
+        </style>
+    </head>
+    <body>
+        <div id="Adminsidenav" class="sidenav">
+            <ul class="navlist">
+                <li><a href="javascript:void(0)" id ="collapse" style="position: absolute;  display:flex;"><i class="fa-solid fa-xmark"></i></a> <!--collapse sidenav--></li>
+                <li><a class="active" href="#TutorAdminHome"><i class="fa-solid fa-home"></i><p class="des">HOME</p></a></li>
+                <li><a href="#TutorAdminAdvertisement" style="padding-top:10px;"><i class="fa-solid fa-rectangle-ad"></i><p class="des">CAMPAIGNS</p></a></li>
+                <li><a href="#TutorAdminAccountMan"><i class="fa-solid fa-users"></i><p class="des">ACCOUNTS</p></a></li>
+                <li><a href="#TutorCourses"><i class="fa-solid fa-book"></i><p class="des">COURSES</p></a></li>
+                <li><a href="#TutorDatabase"><i class="fa-solid fa-database"></i><p class="des">DATABASE</p></a></li>
+            </ul>
+            <a href="#TutorCredit"><u style="display: block; position:absolute; bottom:50px; left:5px; font-size: 12px; overflow:hidden" >About</u></a>
+        </div>
+        <div class ="topbar" id="topbar">  <!--top bar-->
+            <a href="javascript:void(0)" id ="switch"><i class="fa-solid fa-angle-right"></i><p style="padding-left:5px; font-weight: 600;">EXPAND</p></a> <!--extend sidenav-->
+            <input type="text" placeholder="Search...">
+            <div class="admincreddropdown">
+                <i class="fa-solid fa-user-tie" id="pfp" style="font-size:20px; text-align:center;"></i>
+                <div class="dropdownlist">
+                    <p id="admin_name">super_user</p>
+                    <a href="#AdminWebpageSetting.html" target="_self">Interface<i style="padding-left:6px;" class="fa-solid fa-palette"></i></a>
+                    <a href="#AdminAccount">Account<i style="padding-left:6px;" class="fa-solid fa-gear"></i></a>
+                    <a href="#TutorLogIn">Log out <i style="padding-left:6px;" class="fa-solid fa-right-from-bracket"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id = "main">   <!--main content starts here-->
+            <div class="dashboard"> <!--dashboard where quick overviews of most important statistics are displayed-->
+                <div class="admin-dash-board-item" id="student_overview" style="cursor:pointer" href="#TutorAdminAccountMan/Student">
+                    <p id="student_num" style="font-size: 40px; font-weight:700; padding: 10px;">0 </p>
+                    <p style="font-weight:600; padding-top: 5px; padding-left:10px;">Students</p>
+                    <i class="fa-solid fa-user-graduate" style="position: absolute; right:20px; top: 20px; font-size: 70px"></i>
+                </div>
+
+                <div class="admin-dash-board-item" id="tutor_overview" style="cursor:pointer" href="#TutorAdminAccountMan/Tutor">
+                    <p id="tutor_num" style="font-size: 40px; font-weight:700; padding: 10px;">0</p>
+                    <p style="font-weight:600; padding-top: 5px; padding-left:10px;">Tutors</p>
+                    <i class="fa-solid fa-chalkboard-user" style="position: absolute; right:20px; top: 20px; font-size: 70px"></i>
+                </div>
+
+                <div class="admin-dash-board-item" id="course_overview" style="cursor:pointer" href="#TutorCourses">
+                    <p id="course_num" style="font-size: 40px; font-weight:700; padding: 10px;">0</p>
+                    <p style="font-weight:600; padding-top: 5px; padding-left:10px;">Courses</p>
+                    <i class="fa-solid fa-book-open" style="position: absolute; right:20px; top: 20px; font-size: 70px"></i>
+                </div>
+            </div>
+            <div class="ads">       <!--ongoing advertising campaigns-->
+                <div class="ads-header">
+                    <p style="font-weight:900; padding:10px;">Ongoing Advertising Campaign(s)</p>
+                    <a id="jump-to-ads" href="#TutorAdminAdvertisement">See all  <i class="fa-solid fa-arrow-right" style="padding:10px"></i></a>
+                </div>
+                <table class = "ads-table">
+                    <tr>
+                        <th style="width:40%">Campaign Name</th>
+                        <th style="width:25%">Type</th>
+                        <th style="width:10%">Status</th>
+                        <th style="width:25%">Person in charge</th>
+                    </tr>
+                    <tr>
+                        <td>Lorem Ipsum</td>
+                        <td>Search Engine Optimization</td>
+                        <td><i class="fa-solid fa-circle-check"></i></td>
+                        <td>Mario & Luigi</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
