@@ -1,0 +1,60 @@
+:root{
+    --white-color:#fff;
+    --black-color:#000;
+    --text-color:#888;
+    --xam:#eeeeee;
+    --xanh-nhat:#cff0ce;
+    --xanh-la:#0c683a;
+    --xanh-duong:rgb(12, 125, 129);
+    --xanh-dam:rgb(9, 99, 102);
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    box-sizing: border-box;
+    background-color: var(--xam);
+}
+
+.header{
+    height: 300px;
+    background-color: var(--xam);
+}
+
+.grid{
+    width: 1800px;
+    max-width: 100%;
+    margin:0 auto;
+}
+
+.container{
+    height: 800px;
+    background-color: var(--xam);
+}
+
+.home{
+    margin-left: 12px;
+}
+
+.grid_full-width{
+    width: 100%;
+}
+
+.grid_row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 6px -12px;
+    height: 320px; 
+}
+
+.grid_column-3{
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: 6px;
+    margin-right: 6px;
+    width:444px;
+}
