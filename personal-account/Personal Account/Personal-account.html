@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Personal Account</title>
+    <link rel="stylesheet" href="personal-account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-account">
+            <div class="account">
+                <img src="#" alt="Avatar">
+                <span>huy@gmail.com</span>
+            </div>
+            <div class="option">
+                <span>
+                    <i class="fa-solid fa-user" style="margin-left: 5px; margin-right: 5px;"></i>
+                    <span onclick="switchTab('personalTab')" id="personal">TÀI KHOẢN CỦA TÔI</span>
+                </span>
+                <span>
+                    <i class="fa-solid fa-key" style="margin-left: 5px; margin-right: 5px;"></i>
+                    <span onclick="switchTab('passwordTab')" id="password">ĐỔI MẬT KHẨU</span>
+                </span>
+            </div>
+        </div>
+        <div class="container-password" id="passwordTab">
+            <form action="">
+                <div class="old_pass">
+                    <label for="old">MẬT KHẨU CŨ</label>
+                    <input type="password" id="old" placeholder="Nhập mật khẩu cũ" required>
+                </div>
+                <div class="new_pass">
+                    <label for="new">MẬT KHẨU MỚI</label>
+                    <input type="password" id="new" placeholder="Nhập mật khẩu mới" required>
+                </div>
+                <div class="new_pass_again">
+                    <label for="newagain">NHẬP LẠI MẬT KHẨU</label>
+                    <input type="password" id="newagain" placeholder="Nhập lại mật khẩu" required>
+                </div>
+                <button type="submit">CẬP NHẬT</button>
+            </form>
+        </div>
+        <div class="container-info" id="personalTab">
+            <form action="">
+                <div class="Name">
+                    <label for="name" style="display: block;">HỌ TÊN</label>
+                    <input type="text" id="name" placeholder="Vd: Nguyễn Văn A" style="width: 30rem; height: 2.5em;"
+                        required>
+                </div>
+                <div class="phone-email">
+                    <div class="Phone">
+                        <label for="phone" style="display: block;">SỐ ĐIỆN THOẠI</label>
+                        <input type="text" id="phone" placeholder="0977638421"
+                            style="width: 14.5rem; height: 2.5em; margin-right: 1rem;" required>
+                    </div>
+                    <div class="Email">
+                        <label for="email" style="display: block;">Email</label>
+                        <input type="email" id="email" placeholder="abc@gmail.com"
+                            style="width: 14.5rem;  height: 2.5em;" required>
+                    </div>
+                </div>
+                <div class="sex-date">
+                    <div class="Sex">
+                        <label for="sex" style="display: block;">GIỚI TÍNH</label>
+                        <select name="sex" id="" style="width: 14.5rem; height: 2.5em; margin-right: 1rem;">
+                            <option value="male">Nam</option>
+                            <option value="femail">Nữ</option>
+                        </select>
+                    </div>
+                    <div class="Date">
+                        <label for="date" style="display: block;">NGÀY SINH</label>
+                        <input type="date" id="date" style="width: 14.5rem; height: 2.5em;">
+                    </div>
+                </div>
+                <div class="Address">
+                    <label for="address" style="display: block;">ĐỊA CHỈ</label>
+                    <input type="text" id="address" placeholder="Khu phố 6, quận Linh Trung, thành phố Thủ Đức"
+                        style="width: 30rem; height: 2.5em;" required>
+                </div>
+                <button type="submit">CẬP NHẬT</button>
+            </form>
+        </div>
+    </div>
+    <script src="script-personal-account.js"></script>
+</body>
+
+</html>
