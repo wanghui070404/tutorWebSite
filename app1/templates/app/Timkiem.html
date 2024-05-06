@@ -1,0 +1,129 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block link %}
+  <title>Find tutors</title>
+  <link rel="stylesheet" href="{% static 'css/base_new.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/main_new.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <header class="header" style="background-color:var(--white-color)">
+    <div class="grid">
+      <div class="header_tieude">
+        <b>Tìm kiếm Gia sư</b>
+      </div>
+      <div class="header-search">
+        <i class="fa-solid fa-magnifying-glass header-search-icon" style="font-size: 18px; color: #7e7c7cfb;"></i>
+        <input type="text" class="header-search-input" placeholder="giáo viên môn toán,lớp 12" />
+        <div class="header-search-history">
+          <h3 class="header-search-history-heading">lịch sử tìm kiếm</h3>
+          <ul class="header-search-history-list">
+            <li class="header-search-history-item">
+              <a href="">giáo viên dạy toán</a>
+            </li>
+            <li class="header-search-history-item">
+              <a href="">lớp 12</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <ul class="loc">
+        <li class="loc-theo">Lọc theo :</li>
+        <li class="loc-item">
+          <a href="" class="loc-item-link">Tên gia sư</a>
+        </li>
+        <li class="loc-item">
+          <a href="" class="loc-item-link">Môn</a>
+        </li>
+        <li class="loc-item">
+          <a href="" class="loc-item-link">Độ tích cực</a>
+        </li>
+        <li class="loc-item">
+          <a href="" class="loc-item-link">Trường</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="grid" style="background-color:var(--white-color)">
+    <p class="category-heading">GIA SƯ CỦA CHÚNG TÔI</p>
+    <div class="grid_row">
+      {% if tutor.status != 0 %}
+        {% for tutor in tutors %}
+          <div class="grid_column-3">
+            <a href="" class="category-link">
+              <div class="category-item">
+                {% if tutor.certificate %}
+                  <div class="category-item-images" style="border-radius: 10px; background-image: url({{ tutor.avatar.url }});"></div>
+                {% else %}
+                  <p>No image uploaded</p>
+                {% endif %}
+                <div class="category-item-name">
+                  <b class="">{{ tutor.name }}</b>
+                </div>
+
+                <div class="category-item-Mon">Môn dạy: {{ tutor.subject1 }}</div>
+
+                <div class="category-item-like category-item-liked">
+                  <i class="category-item-like-fill fa-solid fa-heart"></i>
+                  <i class="category-item-like-empty fa-regular fa-heart"></i>
+                </div>
+
+                <div class="category-item-rating">
+                  <i class="fa-solid fa-thumbs-up"></i>
+                  {{ tutor.Optimistic }}% tích cực
+                </div>
+              </div>
+
+              <div class="category-text">
+                <p class="category-text-1">{{ tutor.school }}</p>
+
+                <p class="category-text-2">{{ tutor.Introduction }}</p>
+              </div>
+            </a>
+            <div class="category-info">
+              <div class="category-info-hoso">
+                <a href="{% url 'info' %}" class="category-info-hoso-link" style="position: relative; right: 10px;">Hồ Sơ</a>
+              </div>
+
+              <div class="category-info-goi">
+                <a href="{% url 'home_chat' %}" class="category-info-goi-link">Chat</a>
+              </div>
+            </div>
+            <div>
+              <p>
+                Likes: <span id="likeCount_{{ tutor.id }}">{{ tutor.likes }}</span>
+              </p>
+              <form id="likeForm_{{ tutor.id }}" method="post" action="{% url 'like_tutor' %}">
+                {% csrf_token %}
+                <input type="hidden" name="tutor_id" value="{{ tutor.id }}" />
+                <button type="submit" onclick="likeTutor({{ tutor.id }})">Like</button>
+              </form>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function likeTutor(tutorId) {
+      $.ajax({
+        type: 'POST',
+        url: $('#likeForm_' + tutorId).attr('action'),
+        data: $('#likeForm_' + tutorId).serialize(),
+        success: function (response) {
+          if (response.status === 'success') {
+            $('#likeCount_' + tutorId).text(response.like_count)
+          } else {
+            alert('Error: ' + response.message)
+          }
+        },
+        error: function () {
+          alert('Error processing your request.')
+        }
+      })
+    }
+  </script>
+{% endblock %}
