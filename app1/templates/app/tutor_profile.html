@@ -1,0 +1,166 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block link %}
+    <title>Tutor profile</title>
+    <link rel="stylesheet" href="{% static 'css/tutor_profile.css' %}">
+    <style>
+        .logo {
+            width: 150px; /* Điều chỉnh kích thước của logo */
+            height: auto;
+            margin-right: 10px; /* Khoảng cách giữa logo và chữ TUTOR */
+            
+        }
+        .logo-text {
+            font-size: 36px;
+            font-weight: bold;
+            margin-right: 200px;
+        }
+        
+        h2{color: #66CCCC;}
+        h4{color: #444444;}
+        p{color: #444444;} 
+    </style>
+{% endblock  %}
+{% block content %}
+<div class="container">
+    <div class="profile-form">
+        <div class="profile-info">
+        <img src="avatar-cute-11.webp" alt="Logo" class="logo">
+        <h1>BÙI CHÂU THỐNG</h1>
+        </div>
+        <p>Sinh viên, dạy kèm tại nhà</p>
+        <h2>Đăng ký học!</h2>
+        <div class="subjects">
+            <div class="subject-item"><h5> 2 Buổi/Tuần: </h5></div>
+            <div class="subject-item">
+                <button onclick="redirectToPayment2()" style="padding: 12px; color: #0c683a">1 tháng</button>
+                <p style="font-size:12px">Giá: 1.600.000 vnd</p>
+            </div>
+            <div class="subject-item">
+                <button onclick="redirectToPayment4()" style="padding: 12px; color: #0c683a">2 tháng</button>
+                <p style="font-size:12px">Giá: 3.100.000 vnd</p>
+            </div>
+        </div>
+        <div class="subjects">
+            <div class="subject-item"><h5> 3 Buổi/Tuần: </h5></div>
+            <div class="subject-item">
+                <button onclick="redirectToPayment6()" style="padding: 12px; color: #0c683a">1 tháng</button>
+                <p style="font-size:12px">Giá: 2.400.000 vnd</p>
+            </div>
+            <div class="subject-item">
+                <button onclick="redirectToPayment9()" style="padding: 12px; color: #0c683a">2 tháng</button>
+                <p style="font-size:12px">Giá: 4.600.000 vnd</p>
+            </div>
+            <div class="subject-item">
+                <button onclick="redirectToPayment12()" style="padding: 12px; color: #0c683a">3 tháng</button>
+                <p style="font-size:12px">Giá: 6.900.000 vnd</p>
+            </div>
+        </div>
+    
+        <script>
+            function redirectToPayment2() {
+                var price = 1600000; // Giá sản phẩm
+                window.location.href = "/payment/?price=" + price;
+            }
+            function redirectToPayment4() {
+                var price = 3100000; // Giá sản phẩm
+                window.location.href = "/payment/?price=" + price;
+            }
+            function redirectToPayment6() {
+                var price = 2400000; // Giá sản phẩm
+                window.location.href = "/payment/?price=" + price;
+            }
+            function redirectToPayment9() {
+                var price = 4600000; // Giá sản phẩm
+                window.location.href = "/payment/?price=" + price;
+            }
+            function redirectToPayment12() {
+                var price = 6900000; // Giá sản phẩm
+                window.location.href = "/payment/?price=" + price;
+            }
+        </script>
+
+
+        <div class="subjects">
+            <h2>Môn dạy:</h2>
+            <div class="subject-item">Toán cấp 2</div>
+            <div class="subject-item">Toán cấp 3</div>
+            <div class="subject-item">Lý cấp 2</div>
+            <div class="subject-item">Lý cấp 3</div>
+            <h2>Khu vực dạy</h2>
+            <div class="subject-item">Thủ Đức</div>
+            <div class="subject-item">Quận 9</div>
+            <div class="subject-item">Quận 2</div>
+            <div class="subject-item">Thủ Đức</div>
+        </div>
+        
+    </div>
+    <div class="profile-form">
+        
+        <h2><p><GIỚI class="gach-ngang">GIỚI THIỆU BẢN THÂN</p></h2>
+        <h4>Tuổi-24</h4>
+        <h4>Giới tính Nam</h4>
+        <h4>0330990444</h4>
+        <p>Mình đã dạy kèm tiếng Hàn được 3 năm.
+             Đối tượng học thường là những người học từ đầu hoặc yếu ngữ pháp.
+             Dựa vào thế mạnh mình đã học ở Đại học là phát âm chuẩn chỉnh và dạy kĩ bài.
+             Trong các năm theo học ở Trường điểm số môn chuyên ngành luôn đạt điểm giỏi và nhận được học bổng của Trường.
+             Theo nhu cầu học của từng học viên và kỹ năng cần cải thiện mà mình có sự định hướng và cách dạy phù hợp.</p>
+
+        <!-- Nội dung của ô giới thiệu bản thân -->
+    </div>
+
+
+    <div class="profile-form">
+        <h2>HỌC VẤN</h2>
+        <p>ĐẠI HỌC NĂM 4 - TRƯỜNG ĐẠI HỌC VĂN HIẾN  </p>
+        <p>CHUYÊN NGÀNH HÀN QUỐC HỌC</p>
+        <p>SINH VIÊN 5 TỐT, THÀNH THÍCH XUÁT SẮC</p>
+          
+        <!-- Nội dung của ô học vấn -->
+    </div>
+
+
+    <div class="profile-form">
+        <h2>HỒ SƠ ĐÃ XÁC THỰC</h2>
+        <p>-ĐÃ XÁC THỰC THÔNG TIN HỒ SƠ: THÔNG TIN CÁ NHÂN, KINH NGHIỆM DẠY KÈM, GIỌNG NÓI, HỌC VẤN, BẰNG CẤP,…</p>
+        <p>-ĐÃ PHỎNG VẤN</p>
+        <p>-ĐÃ ĐÀO TẠO QUY TRÌNH DẠY KÈM</p>
+        <p ><i style="color: green;">Cam kết chất lượng hồ sơ gia sư để kết nối đến người học, phụ huynh!</i></p>
+        <!-- Nội dung của ô hồ sơ đã xác thực -->
+    </div>
+</div>
+<div class="media-container">
+    <div class="profile-form">
+        <h2>CHỨNG CHỈ, MINH HỌA</h2>
+        <p>Hình ảnh, minh chứng</p>
+    </div>
+        <!-- Nội dung của ô học vấn -->
+        <div class="media-item">
+            <img src="MyIC_Inline_59869.jpg" alt="Logo" >
+        </div>
+        <div class="media-item">
+            <img src="118210169_3214935968764516_8800626220034487068_o_JMXZ.png" alt="Logo" >
+        </div>
+        <div class="media-item">
+            <img src="1-9383.jpg.webp" alt="Logo" >
+        </div>
+    <!-- Thêm các media-item khác tùy theo nhu cầu -->
+</div>
+<div class="media-container">
+    <div class="profile-form">
+        <h2>NỘI DUNG ĐĂNG TẢI</h2>
+        <p>Video giảng dạy, hình ảnh minh họa</p>
+    </div>
+    <div class="media-item">
+        <img src="ảnh 2.jpg" alt="Logo" >
+    </div>
+    <div class="media-item">
+        <img src="video.avif" alt="Logo" >
+    </div>
+    <div class="media-item">
+        <img src="ảnh 2.jpg" alt="Logo" >
+    </div>
+</div>
+
+{% endblock  %}

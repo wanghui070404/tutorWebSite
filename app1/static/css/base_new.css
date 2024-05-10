@@ -1,0 +1,66 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #888;
+    --xam: #eeeeee;
+    --xanh-nhat: #cff0ce;
+    --xanh-la: #0c683a;
+    --xanh-duong: rgb(12, 125, 129);
+    --xanh-dam: rgb(9, 99, 102);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    padding: 20px;
+}
+
+.grid {
+    width: 1800px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.home {
+    margin-left: 12px;
+}
+
+.grid_full-width {
+    width: 100%;
+}
+
+.grid_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    margin: 6px -12px;
+    gap: 10px;
+    width: 100%;
+    /* padding: 0px 10px; */
+
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: auto;
+    gap: 16px; */
+}
+
+.grid_column-3 {
+    padding: 3px 6px;
+    margin: 0 6px;
+    width: 350px;
+    height: 350px;
+}
+
+
