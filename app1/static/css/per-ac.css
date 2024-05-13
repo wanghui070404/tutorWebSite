@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+    height: 300px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.container-account {
+    width: 40%;
+    border: 1px solid #d3d0d0;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    ;
+}
+
+.account {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #d3d0d0;
+    ;
+}
+
+.option {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 10px;
+}
+
+.option span {
+    color: #424141;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container-password label {
+    display: block;
+    text-align: left;
+    color: #a7a5a5;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.container-password input[type="password"] {
+    width: 30rem;
+    height: 2.5em;
+    border: 1px solid #a7a4a4;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 2px;
+    outline: none;
+}
+
+.container-password {
+    position: relative;
+    top: 50px;
+    border: 1px solid #d3d0d0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 20px;
+}
+
+.container-password div {
+    margin-bottom: 30px;
+}
+
+button {
+    width: 30rem;
+    height: 2.5em;
+    padding-top: 2px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0a86f2b3;
+    color: #292727;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #211d1d;
+    color: #fff;
+    transition: 0.5s ease;
+}
+
+.container-info {
+    /* width: 35%; */
+    position: relative;
+    top: 92px;
+    border: 1px solid #d3d0d0;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 20px;
+}
+
+.phone-email {
+    display: flex;
+    flex-direction: row;
+}
+
+.sex-date {
+    display: flex;
+    flex-direction: row;
+}
+
+.container-info input {
+    border: 1px solid #a7a4a4;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 2px;
+    outline: none;
+}
+
+.container-info #name {
+    width: 30rem;
+    height: 2.5em;
+}
+
+.container-info #phone {
+    width: 14.5rem;
+    height: 2.5em;
+    margin-right: 1rem;
+}
+
+.container-info #school {
+    width: 14.5rem;
+    height: 2.5em;
+}
+
+.container-info #sex {
+    width: 14.5rem;
+    height: 2.5em;
+    margin-right: 1rem;
+}
+
+.container-info #date {
+    width: 14.5rem;
+    height: 2.5em;
+}
+
+.container-info #current-address {
+    width: 30rem;
+    height: 2.5em;
+}
+
+.container-info label {
+    color: #a7a5a5;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.container-info>form>div {
+    margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 972px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 60%;
+        height: 800px;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .container-password *:not(:button) {
+        width: 80vw;
+        min-width: 300px;
+        border: 1px solid #d3d0d0;
+        border-radius: 5px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+        text-align: left;
+    }
+    
+
+    .container-account {
+        width: 60vw;
+        min-width: 300px;
+        border: 1px solid #d3d0d0;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    }
+
+    .container-info *:not(:button) {
+        /* width: 35%; */
+        width: 80vw;
+        min-width: 300px;
+        position: relative;
+        top: 92px;
+        border: 1px solid #d3d0d0;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+        padding: 20px;
+        text-align: left;
+    }
+
+    .container-info #name {
+        width: 45vw;
+        min-width: 250px;
+        height: 2.5em;
+    }
+
+    .container-info #current-address {
+        width: 45vw;
+        min-width: 250px;
+        height: 2.5em;
+    }
+
+    .container-info #phone {
+        width: 45vw;
+        min-width: 250px;
+        height: 2.5em;
+        margin: 0 auto;
+    }
+    
+    .container-info #school {
+        width: 45vw;
+        min-width: 250px;
+        height: 2.5em;
+        margin: 0 auto;
+    }
+    
+    .container-info #sex {
+        width: 45vw;
+        min-width: 250px;
+        height: 2.5em;
+        margin: 0 auto;
+    }
+    
+    .container-info #date {
+        width: 45vw;
+        min-width: 250px;
+        height: 2.5em;
+        margin: 0 auto;
+    }
+
+    .School {
+        margin-top: 30px;
+    }
+
+    .Date {
+        margin-top: 30px;
+    }
+
+    .phone-email {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sex-date {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        width: 30vw;
+        height: 2.5em;
+        padding-top: 2px;
+        border-radius: 5px;
+        border: none;
+        background-color: #0a86f2b3;
+        color: #292727;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .old_pass #old {
+        min-width: 250px;
+        width: 45vw;
+    }
+
+    .new_pass #new {
+        min-width: 250px;
+        width: 45vw;
+    }
+    
+    .new_pass_again #newagain{
+        min-width: 250px;
+        width: 45vw;
+    }
+}

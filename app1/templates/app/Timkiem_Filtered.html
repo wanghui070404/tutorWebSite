@@ -1,0 +1,99 @@
+{% extends 'app/Timkiem.html' %}
+{% load static %} 
+{% block link %}
+  <title>Find tutors</title>
+  <link rel="stylesheet" href="{% static 'css/base_new.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/find.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <header class="header" style="background-color:var(--white-color)">
+    <div class="grid">
+      <div class="header_tieude">
+        <b>TÌM KIẾM GIA SƯ</b>
+      </div>
+      <div class="header-search">
+        <form action="{% url 'tim' %}" method="GET">
+          <input type="text" name="tim" class="header-search-input" placeholder="VD: Tên, Trường, Môn dạy,.." />
+          <button type="submit" class="header-search-button" style="border: none; background-color: transparent; cursor: pointer;"><i class="fa fa-search" aria-hidden="true" id="search-icon"></i></button>
+        </form>
+        <div class="header-search-history">
+          <h3 class="header-search-history-heading">lịch sử tìm kiếm</h3>
+          <ul class="header-search-history-list">
+            <li class="header-search-history-item">
+              <a href="">giáo viên dạy toán</a>
+            </li>
+            <li class="header-search-history-item">
+              <a href="">lớp 12</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <ul class="loc">
+        <li class="loc-theo">Lọc theo :</li>
+        {% if tag %}
+        <li class="loc-item">
+          <a href="" class="active-link" style="text-decoration: none; font-weight: 600;">{{ tag }}</a>
+        </li>
+        {% endif %}
+        <li class="loc-item">
+          <a href="{% url 'find' %}" class="loc-item-link"><i class="fa-solid fa-x" style="color:rgb(150, 0, 0); font-weight:300px;"></i></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="grid" style="background-color:var(--white-color)">
+    {% if tutors %}
+      <p class="category-heading">GIA SƯ CỦA CHÚNG TÔI</p>
+      <div class="grid_row">
+        {% for tutor in tutors %}
+        <div class="grid_column-3">
+          <a href="" class="category-link">
+            <div class="category-item">
+               {% if tutor.certificate %}
+                  <div class="category-item-images" style="border-radius: 10px; background-image: url({{ tutor.avatar.url }});"></div>
+                {% else %}
+                  <p>No image uploaded</p>
+                {% endif %}
+              <div class="category-item-name">
+                <b class="">{{tutor.name}}</b>
+              </div>
+
+              <div class="category-item-Mon">Môn dạy: {{tutor.subject1}}</div>
+
+              <div class="category-item-like category-item-liked">
+                <i class="category-item-like-fill fa-solid fa-heart"></i>
+                <i class="category-item-like-empty fa-regular fa-heart"></i>
+              </div>
+
+              <div class="category-item-rating">
+                <i class="fa-solid fa-thumbs-up"></i>
+                {{tutor.Optimistic}}% tích cực
+              </div>
+            </div>
+
+            <div class="category-text">
+              <p class="category-text-1">{{ tutor.school }}</p>
+
+              <p class="category-text-2">{{tutor.Introduction}}</p>
+            </div>
+          </a>
+          <div class="category-info">
+            <div class="category-info-hoso">
+              <a href="{% url 'info' %}" class="category-info-hoso-link" style="position: relative; right: 10px;">Hồ Sơ</a>
+            </div>
+
+            <div class="category-info-goi">
+              <a href="{% url 'home_chat' %}" class="category-info-goi-link">Chat</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      {% else %}
+        <p style="font-size: 30px; position: relative; color: red;">Oái, không tìm thấy gia sư nào phù hợp cả!</p>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

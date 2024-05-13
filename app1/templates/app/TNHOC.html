@@ -1,0 +1,291 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block link %}
+  <title>Tài nguyên học</title>
+  <style>
+    /* CSS cho thanh công cụ */
+    .sidebar {
+      height: fit-content;
+      width: 200px;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      background-color: #66cccc;
+      padding-top: 20px;
+      padding-left: 10px;
+      cursor: pointer;
+    }
+    
+    .sidebar h2 {
+      color: #fff;
+      /* Màu trắng cho chữ */
+      border-bottom: 2px solid #fff;
+      /* Đường kẻ dưới */
+      padding-bottom: 10px;
+      /* Khoảng cách giữa đường kẻ dưới và chữ */
+      margin-bottom: 20px;
+      /* Khoảng cách giữa mỗi mục */
+      font-size: 18px;
+    }
+    
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #fff;
+      /* Màu trắng cho chữ */
+      border: 1px solid #fff;
+      /* Đường viền */
+      margin-bottom: 10px;
+      /* Khoảng cách giữa mỗi mục */
+      border-radius: 5px;
+      /* Bo tròn viền */
+      transition: background-color 0.3s, border-color 0.3s;
+      /* Hiệu ứng hover */
+    }
+    
+    .sidebar a:hover {
+      background-color: #33ffcc;
+      /* Màu xanh lá nhạt khi hover */
+      border-color: #33ffcc;
+      /* Đường viền xanh lá nhạt khi hover */
+    }
+    
+    /* CSS cho nội dung chính */
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+    }
+    
+    .content-block {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f9f9f9;
+      display: none;
+      /* Ẩn tất cả các khối nội dung ban đầu */
+    }
+    
+    .content-block.active {
+      display: block;
+      /* Hiển thị khối nội dung nếu có class active */
+    }
+    
+    .content-block p {
+      margin: 10px 0;
+    }
+    
+    /* CSS cho tiêu đề môn học */
+    .subject-title {
+      display: block;
+      margin-bottom: 10px;
+      background-color: #66cccc;
+      /* Màu xanh lá */
+      color: #fff;
+      /* Màu trắng cho chữ */
+      padding: 5px 10px;
+      /* Khoảng cách giữa nội dung và viền */
+    }
+    
+    button {
+      display: block;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #66cccc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #33ffcc;
+    }
+    
+    .media-container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      float: left;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+    
+    .media-item {
+      width: calc(20% - 10px);
+      height: 150px;
+      margin: 5px;
+      float: left;
+      background-color: #f0f0f0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+    
+    @media screen and (max-width: 972px) {
+      .media-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        float: left;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+      .media-item {
+        width: 90%;
+        min-width: 80px;
+        height: 150px;
+        margin: 5px;
+        float: left;
+        background-color: #f0f0f0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div class="sidebar" onclick="toggleSidebar()">
+    <h2>Danh sách môn học</h2>
+    <a href="#" onclick="showContent('toan')">Toán</a>
+    <a href="#" onclick="showContent('ly')">Lý</a>
+    <a href="#" onclick="showContent('hoa')">Hóa</a>
+    <a href="#" onclick="showContent('van')">Văn</a>
+    <a href="#" onclick="showContent('tienganh')">Tiếng Anh</a>
+    <!-- Thêm các môn học khác tại đây -->
+  </div>
+
+  <div class="content">
+    <!-- Tiêu đề môn học hiển thị mặc định -->
+    <h2 id="toan-title" class="subject-title">Tài liệu môn Toán</h2>
+    <div id="toan" class="content-block">
+      <!-- Thêm các khối nội dung từ khối 6 đến 12 cho môn Toán -->
+
+      <p>Khối nội dung 10</p>
+      <video width="230px" height="200px" controls>
+        <source src="" type="video/mp4" />
+      </video>
+      <div class="media-container">
+        <div class="media-item"></div>
+        <div class="media-item"></div>
+      </div>
+      <p style="position: relative; top: 5px;">Khối nội dung 11</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <p style="position: relative; top: 5px;">Khối nội dung 12</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <hr />
+    </div>
+
+    <!-- Tương tự cho các môn Lý, Hóa, Văn và Tiếng Anh -->
+    <h2 id="ly-title" class="subject-title">Tài liệu môn Lý</h2>
+    <div id="ly" class="content-block">
+      <!-- Thêm các khối nội dung từ khối 6 đến 12 cho môn Lý -->
+      <p>Khối nội dung 10</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <p style="position: relative; top: 5px;">Khối nội dung 11</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <p style="position: relative; top: 5px;">Khối nội dung 12</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <hr />
+    </div>
+
+    <h2 id="hoa-title" class="subject-title">Tài liệu môn Hóa</h2>
+    <div id="hoa" class="content-block">
+      <!-- Thêm các khối nội dung từ khối 6 đến 12 cho môn Hóa -->
+      <p>Khối nội dung 10</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <p style="position: relative; top: 5px;">Khối nội dung 11</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <p style="position: relative; top: 5px;">Khối nội dung 12</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <hr />
+    </div>
+
+    <h2 id="van-title" class="subject-title">Tài liệu môn Văn</h2>
+    <div id="van" class="content-block">
+      <!-- Thêm các khối nội dung từ khối 6 đến 12 cho môn Văn -->
+      <p>Khối nội dung 10</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <p style="position: relative; top: 5px;">Khối nội dung 11</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <p style="position: relative; top: 5px;">Khối nội dung 12</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <hr />
+    </div>
+
+    <h2 id="tienganh-title" class="subject-title">Tài liệu môn Tiếng Anh</h2>
+    <div id="tienganh" class="content-block">
+      <!-- Thêm các khối nội dung từ khối 6 đến 12 cho môn Tiếng Anh -->
+      <p>Khối nội dung 10</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <p style="position: relative; top: 5px;">Khối nội dung 11</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <p style="position: relative; top: 5px;">Khối nội dung 12</p>
+      <div class="media-container">
+        <div class="media-item"></div>
+      </div>
+      <hr />
+    </div>
+  </div>
+
+  <script>
+    var lastClickedId = null
+    var sidebarVisible = true // Biến để lưu trạng thái hiển thị của sidebar
+    
+    function showSidebar() {
+      var sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'block'
+      sidebarVisible = true
+    }
+    
+    function showContent(id) {
+      var selectedContent = document.getElementById(id)
+    
+      if (selectedContent) {
+        if (lastClickedId === id && selectedContent.classList.contains('active')) {
+          // Nếu đã click vào một lần nữa và khối này đang hiển thị, ẩn nó đi
+          selectedContent.classList.remove('active')
+          lastClickedId = null // Đặt lại lastClickedId về null
+        } else {
+          // Ẩn tất cả các khối nội dung
+          var contentBlocks = document.querySelectorAll('.content-block')
+          contentBlocks.forEach(function (block) {
+            block.classList.remove('active')
+          })
+    
+          // Hiển thị khối nội dung của môn được chọn
+          selectedContent.classList.add('active')
+          lastClickedId = id // Lưu id của khối vừa được click
+        }
+      }
+    }
+  </script>
+{% endblock %}
