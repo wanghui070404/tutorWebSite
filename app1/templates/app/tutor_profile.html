@@ -1,0 +1,168 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block link %}
+  <title>Tutor profile</title>
+  <link rel="stylesheet" href="{% static 'css/tutorProfile.css' %}" />
+  <style>
+    .logo {
+      width: 150px; /* Điều chỉnh kích thước của logo */
+      height: auto;
+      margin-right: 10px; /* Khoảng cách giữa logo và chữ TUTOR */
+    }
+    .logo-text {
+      font-size: 36px;
+      font-weight: bold;
+      margin-right: 200px;
+    }
+    h4 {
+      color: #444444;
+    }
+    p {
+      color: #444444;
+    }
+  </style>
+{% endblock %}
+{% block content %}
+  {% if product %}
+    <div class="container">
+      <div class="profile-form">
+        <div class="profile-info">
+          <img src="{{ product.avatar.url }}" alt="avatar" class="logo" />
+          <h1 style="color: #4ecaae;">{{ product.name }}</h1>
+        </div>
+        <p style="font-size: 13px; font-weight: 600;">SINH VIÊN - DẠY KÈM TẠI NHÀ</p>
+        <h2 style="color: #67c23a;">ĐĂNG KÝ HỌC</h2>
+        <div class="subjects-cost">
+          <div class="subject-category">
+            <h5>2 Buổi/Tuần</h5>
+          </div>
+          <div class="subject-item">
+            <button onclick="redirectToPayment2()">1 tháng</button>
+            <p>Giá: 1.600.000 vnd</p>
+          </div>  
+          <div class="subject-item">
+            <button onclick="redirectToPayment4()">2 tháng</button>
+            <p>Giá: 3.100.000 vnd</p>
+          </div>
+        </div>
+        <div class="subjects-cost">
+          <div class="subject-category">
+            <h5>3 Buổi/Tuần</h5>
+          </div>
+          <div class="subject-item">
+            <button onclick="redirectToPayment6()">1 tháng</button>
+            <p>Giá: 2.400.000 vnd</p>
+          </div>
+          <div class="subject-item">
+            <button onclick="redirectToPayment9()">2 tháng</button>
+            <p>Giá: 4.600.000 vnd</p>
+          </div>
+          <div class="subject-item">
+            <button onclick="redirectToPayment12()">3 tháng</button>
+            <p>Giá: 6.900.000 vnd</p>
+          </div>
+        </div>
+
+        <script>
+          function redirectToPayment2() {
+            var price = 1600000 // Giá sản phẩm
+            window.location.href = '/payment/?price=' + price
+          }
+          function redirectToPayment4() {
+            var price = 3100000 // Giá sản phẩm
+            window.location.href = '/payment/?price=' + price
+          }
+          function redirectToPayment6() {
+            var price = 2400000 // Giá sản phẩm
+            window.location.href = '/payment/?price=' + price
+          }
+          function redirectToPayment9() {
+            var price = 4600000 // Giá sản phẩm
+            window.location.href = '/payment/?price=' + price
+          }
+          function redirectToPayment12() {
+            var price = 6900000 // Giá sản phẩm
+            window.location.href = '/payment/?price=' + price
+          }
+        </script>
+
+        <div class="subjects">
+          <p style="font-weight: 600; color: #67c23a;">MÔN DẠY</p>
+          <div class="subject">
+          <div>{{ product.subject1 }}</div>
+          <div>{{ product.subject2 }}</div>
+          <div>{{ product.subject3 }}</div>
+          </div>
+          <p style="font-weight: 600; color: #67c23a;">ĐỊA CHỈ</p>
+          <p style="text-transform: uppercase; font-size: 13px;">{{ product.address }}</p>
+        </div>
+      </div>
+      <div class="profile-form">
+        <p style="font-weight: 600; color: #67c23a;">GIỚI THIỆU BẢN THÂN</p>
+        <p style="margin: 10px auto;">Giới tính: {{ product.sex }}</p>
+        <p>Số điện thoại:{{ product.phone_number }}</p>
+        <p>{{ product.Introduction }}</p>
+        <!-- Nội dung của ô giới thiệu bản thân -->
+      </div>
+
+      <div class="profile-form profic">
+        <p style="font-weight: 600; color: #67c23a;">HỌC VẤN</p>
+        <p style="text-transform: uppercase; font-size: 13px;">{{ product.school }}</p>
+
+        <!-- Nội dung của ô học vấn -->
+      </div>
+
+      <div class="profile-form profile">
+        <p style="font-weight: 600; color: #67c23a;">HỒ SƠ ĐÃ XÁC THỰC</p>
+        <p><i class="fa-solid fa-check" style="color: #67c23a;"></i> ĐÃ XÁC THỰC THÔNG TIN HỒ SƠ: THÔNG TIN CÁ NHÂN, KINH NGHIỆM DẠY KÈM, GIỌNG NÓI, HỌC VẤN, BẰNG CẤP,…</p>
+        <p><i class="fa-solid fa-check" style="color: #67c23a;"></i> ĐÃ PHỎNG VẤN</p>
+        <p><i class="fa-solid fa-check" style="color: #67c23a;"></i> ĐÃ ĐÀO TẠO QUY TRÌNH DẠY KÈM</p>
+        <p>
+          <i style="color: green;">Cam kết chất lượng hồ sơ gia sư để kết nối đến người học, phụ huynh!</i>
+        </p>
+        <!-- Nội dung của ô hồ sơ đã xác thực -->
+      </div>
+    </div>
+    <div class="haha">
+      <div class="media-container">
+        <div class="profile-form text">
+          <h2>CHỨNG CHỈ</h2>
+        </div>
+        <div class="media-item" style="width: 95%; height: 200px; text-align: center;">
+          <img src="{{ product.certificate.url }}" alt="Logo" style="width: 100%; height: 200px;" />
+        </div>
+      </div>
+      <div class="media-container">
+        <div class="profile-form text">
+          <h2>GIỚI THIỆU</h2>
+        </div>
+        <div class="media-item media-video" style="width: 95%; height: 200px; text-align: center;">
+          <video controls style="width: 100%; height: 200px; position: relative; bottom: 5px;">
+            <source src="{{ product.video.url }}" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if user.username %}
+<form action="{% url 'info' product.id %}" method='post' class="comment">
+    {% csrf_token %}
+    {{form.body}}
+    <br/>
+    <input type="submit" value="Bình luận"/ class="comment-btn">
+</form>
+{% endif %}
+<div class="comments">
+{% for comment in product.comments.all %}
+<div>
+    <ul>
+        <li style="list-style-type: none;">
+            <h4><strong>{{comment.author}}</strong><p style="margin-left:10px; display: inline; font-size: 10px; color: #828282;">{{comment.date}}</p></h4>
+        </li>
+    </ul>
+    <p style="margin-top:5px">{{comment.body|linebreaks}}</p>
+</div>
+{% endfor %}
+</div>
+
+{% endblock %}
