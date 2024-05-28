@@ -1,0 +1,188 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block link %}
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/tu.css' %}">
+{% endblock %}
+{% block content %}
+<div class="container-intro">
+    <div class="intro">
+        <span>Trở thành gia sư dạy kèm chuyên nghiệp</span>
+        <p id="intro-p">Tạo hồ sơ gia sư để khám phá và trải nghiệm dịch vụ gia sư chuyên nghiệp.
+            Phát triển kỹ năng mới, và sử dụng công nghệ trong quy trình dạy kèm chuyên nghiệp.</p>
+    </div>
+    <img src="{% static 'img/intro-img-1-cffddaebe022132cea0da92fb35e503c.png' %}" alt="img-intro">
+</div>
+<div class="container-benefit">
+    <span>Lợi ích Tutor mang đến cho Gia Sư</span>
+    <div class="benefit">
+        <div>
+            <div class="icon"><i class="fa-solid fa-star"></i></div>
+            <span>Dạy kèm chuyên nghiệp</span>
+            <p>Dạy kèm chuyên nghiệp và hiệu quả với tính năng
+                quản lý lớp dạy kèm dành riêng cho Gia sư</p>
+        </div>
+        <div>
+            <div class="icon"><i class="fa-solid fa-file"></i></div>
+            <span>Tạo hồ sơ năng lực dễ dàng</span>
+            <p>Tạo một hồ sơ năng lực gia sư chuyên nghiệp, thu hút
+                người học- phụ huynh gửi lời mời để tiếp cận nhiều lớp dạy</p>
+        </div>
+        <div>
+            <div class="icon"><i class="fa-solid fa-user"></i></div>
+            <span>Chính sách tốt cho Gia sư</span>
+            <p>Chỉ thanh toán lệ phí sau
+                khi nhận lớp thành công. Lệ phí nhận lớp thấp.</p>
+            <p>Có cơ hội trở thành gia sư cao
+                cấp tại Tutor với nhiều quyền lợi.</p>
+            <p>Tăng thu nhập giờ rảnh với tính năng trả
+                lời câu hỏi của người học.</p>
+        </div>
+    </div>
+</div>
+<div class="container-procedure">
+    <span>Quy trình trở thành Gia Sư Tutor</span>
+    <div class="procedure">
+        <div>
+            <div class="round-button">01</div>
+            <span>Tạo hồ sơ gia sư chi tiết</span>
+            <p>Tạo một hồ sơ chuyên nghiệp để thu hút lớp dạy từ phụ huynh, người học.</p>
+            <p>Hồ sơ sẽ được Jasu duyệt và chứng thực.</p>
+        </div>
+        <div>
+            <div class="round-button">02</div>
+            <span>Ký hợp đồng và ứng tuyển các lớp phù hợp</span>
+            <p>Ký hợp đồng để đảm bảo chất lượng của các bên, tránh xảy ra các vấn đề không mong muốn.</p>
+            <p>Chủ động ứng tuyển các lớp dạy phù hợp được đề xuất riêng cho gia sư.</p>
+        </div>
+        <div>
+            <div class="round-button">03</div>
+            <span>Nhận lớp dạy kèm</span>
+            <p>Kiểm tra năng lực đầu vào của người học.</p>
+            <p>Dạy thử 1 buổi Miễn phí.</p>
+            <p>Viết nhật ký dạy kèm và báo cáo định kỳ hàng tháng trên app.</p>
+        </div>
+    </div>
+</div>
+<!-- Form đăng ký cho Gia sư -->
+<div class="container-tutor" style="margin-bottom: 550px;">
+    <div id="tutor-re">Đăng ký ứng tuyển Gia Sư</div>
+    <div class="tutor">
+        <form action="{% url 'save_data' %}" id="registration-form1" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div id="title">Thông tin cơ bản</div>
+            <div class="flex-box">
+                <label for="Name">HỌ TÊN</label>
+                <input type="text" name="name" id="name" placeholder="VD: Nguyễn Văn A" style="width: 100%;" required>
+
+                <label for="sex">GIỚI TÍNH</label>
+                <select name="sex" id="sex" style="width: 100%;">
+                    <option value="Male">Nam</option>
+                    <option value="Female">Nữ</option>
+                </select>
+
+                <label for="phone">ĐIỆN THOẠI</label>
+                <input type="tel" name="phone" id="phone" placeholder="VD: 0375335821" style="width: 100%;" required>
+
+                <label for="current-address">CHỖ Ở HIỆN TẠI</label>
+                <input type="text" name="current-address" id="current-address"
+                    placeholder="VD: Khu phố 6, phường Linh Trung, Thủ Đức, TP.HCM" style="width: 100%;" required>
+
+                <label for="school">TRƯỜNG</label>
+                <input type="text" name="school" id="school" placeholder="VD: Đại học công nghệ thông tin" style="width: 100%;" required>
+
+                <label for="avatar">ẢNH ĐẠI DIỆN</label>
+                <input type="file" name="avatar" id="avatar" style="width: 100%;" required>
+
+                <label for="certificate">MINH CHỨNG</label>
+                <input type="file" name="certificate" id="certificate" style="width: 100%;" required>
+
+                <label for="video">VIDEO GIỚI THIỆU</label>
+                <input type="file" name="video" id="video" style="width: 100%;" required>
+
+                <label for="subject1">MÔN DẠY 1</label>
+                <input type="text" name="subject1" id="subject1" placeholder="VD: Toán" style="width: 100%;" required>
+
+                <label for="subject2">MÔN DẠY 2</label>
+                <input type="text" name="subject2" id="subject2" placeholder="VD: Lý" style="width: 100%;">
+
+                <label for="subject3">MÔN DẠY 3</label>
+                <input type="text" name="subject3" id="subject3" placeholder="VD: Hóa" style="width: 100%;">
+
+                <label for="introduction">GIỚI THIỆU VỀ BẢN THÂN</label>
+                <textarea name="introduction" id="introduction" cols="20" rows="10" placeholder="Chào các bạn, mình đang là sinh viên năm hai,..."></textarea>
+
+                <label for="confirm" class="confirm">Tôi đã xem và đồng ý với <a href="#">Quy định</a> của TUTOR
+                    <input type="checkbox" name="confirm" id="confirm" required>
+                </label>
+            </div>
+
+            <div id="button"><button type="submit" id="btn-submit">GỬI THÔNG TIN</button></div>
+        </form>
+
+
+    </div>
+</div>
+
+<!-- Form đăng ký cho học viên -->
+<button id="open-form-btn">Gửi yêu cầu tư vấn</button>
+
+<div id="form-popup">
+    <span id="close-btn">&times;</span>
+    <p id="inform1">GỬI YÊU CẦU CHO TUTOR</p>
+    <p id="inform2">Bạn để lại thông tin để Tutor hỗ trợ tư vấn chọn gia sư phù hợp nhé!</p>
+    <hr>
+    <form id="registration-form2" action="{% url 'save_counseling' %}" method="post">
+        {% csrf_token %}
+        <label for="formType">BẠN MUỐN HỌC KÈM THEO HÌNH THỨC NÀO</label>
+        <select id="formType" name="form" style="width: 100%;">
+            <option value="home">Dạy tại nhà</option>
+            <option value="online">Dạy online</option>
+        </select>
+
+        <label for="name">NHẬP HỌ TÊN CỦA BẠN</label>
+        <input type="text" id="name" name="name" placeholder="Vd: Nguyễn Văn A" required>
+
+        <label for="phone">NHẬP SỐ ĐIỆN THOẠI CỦA BẠN</label>
+        <input type="tel" id="phone" name="phone" placeholder="Vd: 0912737841" style="width: 100%;" required>
+
+        <label for="subject">BẠN MUỐN HỌC KÈM MÔN GÌ?</label>
+        <select id="subject" name="subject" style="width: 100%;">
+            <option value="math">Toán</option>
+            <option value="physics">Lý</option>
+            <option value="chemistry">Hoá</option>
+            <option value="biology">Sinh</option>
+            <option value="english">Tiếng Anh</option>
+            <option value="literature">Văn</option>
+        </select>
+
+        <label for="province">TỈNH THÀNH</label>
+        <select id="province" name="province" style="width: 100%;">
+            <option value="">Chọn tỉnh thành</option>
+            <option value="hn">Hà Nội</option>
+            <option value="hcm">Hồ Chí Minh</option>
+            <!-- Thêm các tỉnh thành khác vào đây nếu cần -->
+        </select>
+
+        <label for="district">QUẬN HUYỆN</label>
+        <select id="district" name="district" style="width: 100%;">
+            <option value="">Chọn quận huyện</option>
+            <!-- Các quận huyện sẽ được thêm bằng JavaScript -->
+        </select>
+
+        <label for="address">ĐỊA CHỈ</label>
+        <input type="text" id="address" name="address"
+            placeholder="Vd:175/19 Phạm Ngũ Lão, Quận 1, thành phố Hồ Chí Minh">
+
+        <label for="description">MÔ TẢ THÊM (NẾU CÓ)</label>
+        <textarea id="description" name="description" placeholder="Em rảnh vào chiều thứ 3,..."></textarea>
+
+        <button type="submit" id="Signup-btn">GỬI YÊU CẦU</button>
+    </form>
+</div>
+
+<div class="overlay"></div>
+</div>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock  %}
+        

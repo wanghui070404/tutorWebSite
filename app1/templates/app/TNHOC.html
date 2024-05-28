@@ -1,0 +1,175 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block link %}
+  <title>Tài nguyên học</title>
+  <link rel="stylesheet" href="{% static 'css/source_Academic.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <div class="subject-list">
+    <h2>Danh sách môn học</h2>
+    <div class="sidebar" onclick="toggleSidebar()">
+      <a href="#" onclick="showContent('toan')">Toán</a>
+      <a href="#" onclick="showContent('ly')">Lý</a>
+      <a href="#" onclick="showContent('hoa')">Hóa</a>
+      <a href="#" onclick="showContent('van')">Văn</a>
+      <a href="#" onclick="showContent('tienganh')">Tiếng Anh</a>
+      <!-- Thêm các môn học khác tại đây -->
+    </div>
+  </div>
+
+  <div class="content">
+    <h2 id="toan-title" class="subject-title">Tài liệu môn Toán</h2>
+    <div id="toan" class="content-block">
+      <p>Khối nội dung 10</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlToan10 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <p>Khối nội dung 11</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlToan11 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <p>Khối nội dung 12</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlToan12 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <hr />
+    </div>
+
+    <!-- Tương tự cho các môn Lý, Hóa, Văn và Tiếng Anh -->
+    <h2 id="ly-title" class="subject-title">Tài liệu môn Lý</h2>
+    <div id="ly" class="content-block">
+      <!-- Thêm các khối nội dung từ khối 6 đến 12 cho môn Lý -->
+      <p>Khối nội dung 10</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlLy10 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <p>Khối nội dung 11</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlLy11 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <p>Khối nội dung 12</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlLy12 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <hr />
+    </div>
+
+    <h2 id="hoa-title" class="subject-title">Tài liệu môn Hóa</h2>
+    <div id="hoa" class="content-block">
+      <!-- Thêm các khối nội dung từ khối 6 đến 12 cho môn Hóa -->
+      <p>Khối nội dung 10</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlHoa10 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <p>Khối nội dung 11</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlHoa11 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <p>Khối nội dung 12</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlHoa12 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <hr />
+    </div>
+    <h2 id="van-title" class="subject-title">Tài liệu môn Văn</h2>
+    <div id="van" class="content-block">
+      <!-- Thêm các khối nội dung từ khối 6 đến 12 cho môn Văn -->
+      <p>Khối nội dung 10</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlVan10 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <p>Khối nội dung 11</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlVan11 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <p>Khối nội dung 12</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlVan12 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <hr />
+    </div>
+    <h2 id="tienganh-title" class="subject-title">Tài liệu môn Tiếng Anh</h2>
+    <div id="tienganh" class="content-block">
+      <!-- Thêm các khối nội dung từ khối 6 đến 12 cho môn Tiếng Anh -->
+      <p>Khối nội dung 10</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlAnh10 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+
+      <p>Khối nội dung 11</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlAnh11 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+
+      <p>Khối nội dung 12</p>
+      <div class="haha">
+        {% for source in sources %}
+          <iframe class="video" src="{{ source.urlAnh12 }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        {% endfor %}
+      </div>
+      <hr />
+    </div>
+  </div>
+
+  <script>
+    var lastClickedId = null
+    var sidebarVisible = true // Biến để lưu trạng thái hiển thị của sidebar
+    
+    function showSidebar() {
+      var sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'block'
+      sidebarVisible = true
+    }
+    
+    function showContent(id) {
+      var selectedContent = document.getElementById(id)
+    
+      if (selectedContent) {
+        if (lastClickedId === id && selectedContent.classList.contains('active')) {
+          // Nếu đã click vào một lần nữa và khối này đang hiển thị, ẩn nó đi
+          selectedContent.classList.remove('active')
+          lastClickedId = null // Đặt lại lastClickedId về null
+        } else {
+          // Ẩn tất cả các khối nội dung
+          var contentBlocks = document.querySelectorAll('.content-block')
+          contentBlocks.forEach(function (block) {
+            block.classList.remove('active')
+          })
+    
+          // Hiển thị khối nội dung của môn được chọn
+          selectedContent.classList.add('active')
+          lastClickedId = id // Lưu id của khối vừa được click
+        }
+      }
+    }
+  </script>
+{% endblock %}

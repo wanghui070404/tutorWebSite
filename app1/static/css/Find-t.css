@@ -1,0 +1,356 @@
+.header {
+    padding: 20px;
+}
+
+.header_tieude {
+    color: #343232;
+    font-size: 27px;
+    margin: 10px 0 20px;
+    font-weight: 600;
+}
+
+.header-search {
+    flex: 1;
+    width: 100%;
+    height: 44px;
+    border-radius: 12px;
+    border: 2px solid var(--text-color);
+    position: relative;
+    margin: 10px 0;
+
+}
+
+.header-search:active {
+    border: 2px solid black;
+}
+
+.header-search-input {
+    width: 94%;
+    font-size: 20px;
+    line-height: 24px;
+    position: relative;
+    border: none;
+    padding: 0;
+    margin: 8px 0;
+    outline: none;
+}
+
+.header-search-icon {
+    width: 5%;
+    font-size: 200%;
+    position: relative;
+    color: #555;
+    align-items: center;
+    text-align: center;
+}
+
+.header-search-history {
+    width: 95%;
+    position: absolute;
+    top: 110%;
+    left: 5%;
+    border-radius: 8px;
+    background-color: var(--xam);
+    box-shadow: 0 0 3px var(--xam);
+    display: none;
+    overflow: hidden;
+}
+
+.header-search-history-heading {
+    margin: 4px;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.header-search-history-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.header-search-history-item {
+    padding: 4px;
+    font-size: 16px;
+}
+
+.header-search-history-item:hover {
+    background-color: white;
+}
+
+.header-search-history-item a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.header-search-input:focus~.header-search-history {
+    display: block;
+}
+
+.loc {
+    display: flex;
+    list-style: none;
+    line-height: 18px;
+    padding: 0;
+    margin-top: 80px;
+}
+
+
+.loc-item {
+    margin: 10px;
+}
+
+.loc-item-link,
+.loc-theo {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.loc-theo {
+    margin: 20px 0 18px;
+    color: #363636;
+    font-size: 15px;
+}
+
+.loc-item-link {
+    border: 1px solid rgb(81, 80, 80);
+    border-radius: 15px;
+    padding: 10px;
+    color: #292727fb;
+}
+
+/*update*/
+#search-icon {
+    position: relative;
+    right: 0;
+    background-color: transparent;
+    padding: 5px;
+    border: none;
+}
+
+.loc-item-link:hover {
+    background-color: #3d6cec;
+    color: white;
+    border-color: transparent;
+    transition: ease 0.5s;
+}
+
+.active-link {
+    border-radius: 15px;
+    padding: 10px;
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #3d6cec;
+    color: white;
+    border: 2px solid black;
+}
+
+/*update ends*/
+.category-heading {
+    font-size: 20px;
+    padding: 20px;
+    color: #7e7c7cfb;
+}
+
+.grid_column-3 {
+    border: 2px groove;
+    border-radius: 10px;
+    background-color: var(--white-color);
+}
+
+.category-link {
+    text-decoration: none;
+    color: var(--black-color);
+}
+
+.category-item,
+.category-text {
+    height: 40%;
+    margin: 10px;
+}
+
+.category-info {
+    height: 10%;
+    position: relative;
+}
+
+.category-info a {
+    position: relative;
+    text-decoration: none;
+}
+
+.category-item-images {
+    width: 108px;
+    height: 108px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.category-item {
+    border-bottom: 1px solid var(--text-color);
+    position: relative;
+}
+
+.category-item-name {
+    position: absolute;
+    font-size: 20px;
+    width: 50%;
+    top: 10px;
+    left: 120px;
+    font-size: 19px;
+    
+}
+
+.category-item-Mon {
+    position: absolute;
+    font-size: 16px;
+    width: 50%;
+    top: 75px;
+    left: 120px;
+}
+
+.category-item-rating {
+    font-size: 12px;
+    position: absolute;
+    width: 10%px;
+    top: 80px;
+    left: 120px;
+    color: var(--xanh-la);
+    background-color: var(--xanh-nhat);
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.category-item-like {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.category-text-1 {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.category-text-2 {
+    color: var(--text-color);
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    font-size: 12px;
+}
+
+i.category-item-like-fill {
+    display: none;
+    color: red;
+    font-size: 18px;
+}
+
+.category-item-like-empty {
+    font-size: 18px;
+}
+
+.category-item-liked .category-item-like-fill {
+    display: inline-block;
+
+}
+
+.category-item-liked .category-item-like-empty {
+    display: none;
+}
+
+.category-info-hoso {
+    position: absolute;
+    top: 0;
+    right: 70px;
+    /* width: 60px; */
+}
+
+.category-info-goi {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* width: 20px; */
+
+}
+
+.category-info-hoso-link {
+    height: 100%;
+    font-size: 13px;
+    color: var(--black-color);
+    padding: 5px 20px;
+    background-color: #eee9e9;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.category-info-goi-link {
+    background-color: var(--xanh-duong);
+    color: var(--white-color);
+    font-size: 13px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    right: 0;
+    text-transform: uppercase;
+}
+
+.category-info-hoso-link:hover {
+    background-color: #e6e1e1;
+}
+
+.category-info-goi-link:hover {
+    background-color: #225624;
+}
+
+@media screen and (max-width: 972px) {
+    #search-icon {
+        position: absolute;
+        top: 12px;
+        right: -3px;
+        background-color: transparent;
+        padding: 5px;
+        border: none;
+    }
+
+    .grid_column-3 {
+        border: 2px groove;
+        border-radius: 10px;
+        background-color: var(--white-color);
+        margin-left: 30px;
+    }
+
+    .loc {
+        display: flex;
+        list-style: none;
+        line-height: 18px;
+        padding: 0;
+        margin-top: 80px;
+        font-weight: 600;
+    }
+    
+    .loc-theo {
+        color: #363636;
+    }
+    
+    .loc-item-link {
+        font-size: 10px;
+        font-weight: 600;
+        background-color: transparent;
+        
+    }
+
+    .category-item-name {
+        font-size: 17px;
+    }
+    
+    .category-item-Mon {
+        font-size: 14px;
+    }
+}

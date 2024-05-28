@@ -1,0 +1,208 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block link %}
+<title>Homepage</title>
+<link rel="stylesheet" href="{% static 'css/Homepage.css' %}">
+{% endblock link %}
+{% block content %}
+<div class="container-intro">
+    <div class="intro">
+        <span>Đạt mục tiêu học tập cùng gia sư Tutor</span>
+        <p>Hơn 1000 gia sư & giáo viên giỏi dạy kèm tại nhà, dạy kèm online sẵn sàng đồng hành
+            cùng học sinh toàn quốc để chinh phục mục tiêu học tập.</p>
+    </div>
+    <div id="img-intro"><img src="{% static 'img/intro-img-1-cffddaebe022132cea0da92fb35e503c.png' %}" alt="img-intro"></div>
+</div>
+<div class="container-method">
+    <div class="method">
+        <span>Phương pháp cá nhân hóa học tập</span>
+        <p>Mỗi người học có một năng lực tiếp thu kiến thức khác nhau. Cá nhân hóa học tập bằng 1 kèm 1, giúp
+            người học ôn lại những kiến thức
+            nền tảng căn bản, không tự ti trong việc hỏi bài, dành nhiều thời gian hơn cho một chủ đề khó hiểu
+            để theo kịp chương trình học.</p>
+    </div>
+    <div id="img-method"><img src="{% static 'img/intro-img-2-79181133cd36f2102e4f247d41b0b0ca.png' %}" alt="img-method"></div>
+</div>
+<div class="container-findTutor">
+    <div class="findTutor">
+        <div class="title">Hãy tìm cho bạn một gia sư phù hợp!</div>
+        <div class="findTutor-box">
+            <div class="step-box">
+                <div class="item">
+                    <div class="item-icon">1</div>
+                    <div class="item-info">
+                        <div class="item-info-title">Tìm gia sư phù hợp</div>
+                        <div class="item-info-text">Bộ lọc giúp bạn tìm gia sư giỏi đúng yêu cầu.
+                            Chỉ vào thao tác chưa tới 1 phút.</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-icon">2</div>
+                    <div class="item-info">
+                        <div class="item-info-title">Gửi lời mời dạy</div>
+                        <div class="item-info-text">Gửi lời mời dạy đến gia sư bạn đã chọn.
+                            Gia sư sẽ phản hồi nhanh trong vòng 2h</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-icon">3</div>
+                    <div class="item-info">
+                        <div class="item-info-title">Kiểm tra đầu vào</div>
+                        <div class="item-info-text">Gia sư sẽ đánh giá năng lực hiện tại và hiểu được mục tiêu
+                            của bạn</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-icon">4</div>
+                    <div class="item-info">
+                        <div class="item-info-title">Học chính thức </div>
+                        <div class="item-info-text">Học 1 kèm 1 chính thức với gia sư Tutor</div>
+                    </div>
+                </div>
+            </div>
+            <div id="img-box">
+                <img src="{% static 'img/apple-ip-screen-08670ba3e3ee05d41f1b169264fa4cf6.png' %}" alt="img-box">
+            </div>
+            <div class="benefit-box">
+                <div class="item">
+                    <div class="item-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="item-info">
+                        <div class="item-info-title">Đội ngũ gia sư giàu kinh nghiệm</div>
+                        <div class="item-info-text">Chúng tôi xác thực hồ sơ gia sư cẩn thận dựa trên nhiều tiêu
+                            chí để kết nối gia sư chất lượng đến người học</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="item-info">
+                        <div class="item-info-title">Lộ trình riêng cho từng người học</div>
+                        <div class="item-info-text">Thiết kế bài giảng phù hợp năng lực hoặc theo nhu cầu học
+                            tập của người học</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="item-info">
+                        <div class="item-info-title">Linh hoạt lịch học</div>
+                        <div class="item-info-text">Gia sư và người học có thể thay đổi lịch học linh hoạt trong
+                            quá trình học
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="item-info">
+                        <div class="item-info-title">Theo dõi tiến độ học kèm</div>
+                        <div class="item-info-text">Được quan tâm, theo kèm sát sao của gia sư phụ trách</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-banner">
+    <div class="banner">
+        <div class="banner-title">Tìm gia sư gần bạn hoặc gia sư online</div>
+        <div class="banner-desciption">Dù bạn ở đâu cũng có thể tiếp cận được gia sư giỏi đa dạng môn học trên
+            nền tảng Tutor.
+            Tutor kết nối gia sư phù hợp nhu cầu, sở thích với người học. Tutor đã sẵn sàng đồng hành giúp bạn đạt
+            được mục tiêu học tập
+        </div>
+    </div>
+</div>
+<div class="container-intro2">
+    <div class="intro2">
+        <div class="study-onl">
+            <div class="content">
+                <div>Học 1 Kèm 1 Online</div>
+                <p>Bạn tự chọn một gia sư phù hợp ở bất kỳ đâu để bắt đầu học 1 kèm 1 online.
+                    Tutor đã chọn những gia sư giỏi, có kinh nghiệm để đồng hành giúp bạn đạt mục tiêu học tập.
+                </p>
+                <p>Linh hoạt lịch học. Lộ trình riêng cho mỗi người học.</p>
+            </div>
+            <div id="img-onl"><img src="{% static 'img/intro-img-3-4afc416b689d2f5c630595896239e4dd.png' %}" alt="studyonl">
+            </div>
+        </div>
+        <div class="study-off">
+            <div class="content">
+                <div>Học 1 Kèm 1 tại nhà</div>
+                <p>Nếu bạn thích học 1 kèm 1 trực tiếp tại nhà theo kiểu truyền thống,
+                    bạn chỉ cần nhập thông tin địa chỉ, Tutor sẽ gợi ý gia sư phù hợp gần bạn.
+                    Bạn chủ động chọn hồ sơ gia sư phù hợp.
+                </p>
+                <p>Linh hoạt lịch học. Lộ trình riêng cho mỗi người học.</p>
+            </div>
+            <div id="img-off"><img src="{% static 'img/intro-img-4-b602794aa2214c7026d5f3f4a72cd927.png' %}" alt="studyoff"></div>
+        </div>
+    </div>
+</div>
+<div class="container-intro3">
+    <div id="selectiondif">....và nhiều lựa chọn khác</div>
+    <div class="intro3">
+        <div class="group-study">
+            <div class="title">
+                <img src="{% static 'img/icon.png' %}" alt="icon">
+                <div>Học theo nhóm nhỏ</div>
+            </div>
+            <div class="content">
+                <div><i class="fa-solid fa-caret-right"></i></div>
+                <p>Học online qua zoom, google meet</p>
+            </div>
+            <div class="content">
+                <div><i class="fa-solid fa-caret-right"></i></div>
+                <p>Số lượng đăng ký từ 6 - 9 học sinh</p>
+            </div>
+            <div class="content">
+                <div><i class="fa-solid fa-caret-right"></i></div>
+                <p>Được lựa chọn gia sư dạy kèm</p>
+            </div>
+            <div class="content">
+                <div><i class="fa-solid fa-caret-right"></i></div>
+                <p>Lịch học linh hoạt theo TKB học sinh</p>
+            </div>
+        </div>
+        <div class="onebyone">
+            <div class="title">
+                <img src="{% static 'img/icon2.png' %}" alt="icon2">
+                <div>Học 1-1 theo 1 bài học</div>
+            </div>
+            <div class="content">
+                <div><i class="fa-solid fa-caret-right"></i></div>
+                <p>Học online qua zoom, google meet</p>
+            </div>
+            <div class="content">
+                <div><i class="fa-solid fa-caret-right"></i></div>
+                <p>Chọn đúng bài học cần cải thiện</p>
+            </div>
+            <div class="content">
+                <div><i class="fa-solid fa-caret-right"></i></div>
+                <p>Được lựa chọn gia sư dạy kèm</p>
+            </div>
+            <div class="content">
+                <div><i class="fa-solid fa-caret-right"></i></div>
+                <p>Lịch học linh hoạt theo TKB học sinh</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about-us">
+    <div id="img-about"><img src="{% static 'img/about-image-ff0f0f964009f4259a5f57e5f798a5a7.png' %}" alt="aboutus"></div>
+    <div class="title">Cầu nối tin cậy giữa người học - phụ huynh và gia sư</div>
+    <div class="content">
+        Tutor ra đời nhằm giúp mỗi người học có thể phát triển đúng thế mạnh,
+        năng lực của bản thân, tự học tốt hơn. Chúng tôi đã xây dựng một nền tảng giúp người học,
+        phụ huynh kết nối dễ dàng với gia sư, chuyên gia, cố vấn,...để đồng hành trong quá trình học tập đạt
+        được mục tiêu mong muốn.
+        Dù bạn ở đâu cũng có thể dễ dàng tự chọn gia sư dạy kèm phù hợp với nhu cầu.
+    </div>
+    <div class="content">
+        Chúng tôi liên tục lắng nghe phản hồi từ phụ huynh, người học gia sư để liên tục cải tiến giúp người
+        dùng trải nghiệm
+        tốt nhất trên nền tảng kết nối gia sư, chuyên gia riêng.
+        Chỉ vài thao tác tìm kiếm, bạn có thể tiếp cận hàng trăm gia sư giỏi của chúng tôi trên Tutor
+    </div>
+</div>
+{% endblock %}
+
+ 

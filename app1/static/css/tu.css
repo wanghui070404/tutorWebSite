@@ -1,0 +1,671 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-intro {
+    width: 90%;
+    min-width: 900px;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.intro span {
+    width: 490px;
+    height: 100px;
+    position: relative;
+    top: 80px;
+    left: 50px;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 0.25px;
+}
+
+#intro-p {
+    position: relative;
+    width: 350px;
+    height: 70px;
+    top: 100px;
+    left: 50px;
+    font-size: 13px;
+    white-space: normal;
+    letter-spacing: 0.5px;
+
+}
+
+.container-intro img {
+    position: relative;
+    top: 50px;
+    right: 50px;
+    width: 35%;
+    height: 80%;
+}
+
+.container-benefit {
+    position: relative;
+    width: 78%;
+    min-width: 800px;
+    height: 450px;
+    margin: 10px auto;
+    background-color: #ecf3fd;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.benefit>div {
+    position: relative;
+    width: 280px;
+    height: 300px;
+    margin: 10px;
+    border: 0.5px solid rgb(226, 224, 224);
+    top: 100px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+}
+
+.container-benefit>span {
+    width: 420px;
+    position: absolute;
+    top: 25px;
+    color: #0373f9;
+    font-size: 24px;
+    font-weight: 600;
+    margin: auto 30.9%;
+    text-align: center;
+}
+
+.benefit span {
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.benefit p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    margin: 10px 20px;
+}
+
+/* icon */
+i {
+    position: relative;
+    top: 7px;
+}
+
+.icon {
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    margin: 20px;
+    background-color: rgb(130, 130, 231);
+    border-radius: 70%;
+    font-size: 30px;
+}
+
+.container-procedure {
+    position: relative;
+    width: 100%;
+    min-width: 800px;
+    height: 450px;
+    background-color: #0373f9;
+}
+
+.procedure {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.procedure>div {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+    padding: 20px;
+    border: 2px solid #fff;
+    top: 100px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.round-button {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    background-color: white;
+    color: #039be5;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.container-procedure>span {
+    width: 420px;
+    margin: auto 34%;
+    position: absolute;
+    top: 40px;
+    /* border: 1px solid black; */
+    font-size: 27px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.procedure span {
+    position: relative;
+    top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.procedure p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    margin: 30px 20px;
+    text-align: left;
+}
+
+
+/* Form đăng ký */
+.registration-form2 {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    /* Đảm bảo kích thước của ô input và select tính cả border và padding */
+}
+
+/* CSS để ẩn form ban đầu và tạo form popup */
+#form-popup {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 40px;
+    /* Tăng giá trị padding để tăng kích thước của form */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    width: 490px;
+    /* Tăng giá trị width để tăng kích thước của form */
+    height: 630px;
+    /* Tăng kích thước theo nội dung bên trong */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#form-popup h2 {
+    margin-top: 0;
+}
+
+.overlay {
+    /* Tạo overlay để làm nền khi form popup hiển thị */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+#inform1 {
+    position: absolute;
+    top: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ccc;
+
+}
+
+#inform2 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #6d6c6c;
+}
+
+label {
+    font-size: 12px;
+    color: #888686;
+    margin: 5px 0 2px;
+}
+
+hr {
+    height: 1px;
+    margin-bottom: 10px;
+    background-color: #ccc;
+    border: none;
+}
+
+#open-form-btn {
+    width: 200px;
+    /* Điều chỉnh chiều rộng */
+    height: 50px;
+    /* Điều chỉnh chiều cao */
+    border: none;
+    border-radius: 25px;
+    /* Điều chỉnh góc bo tròn */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: fixed;
+    bottom: 20px;
+    /* Điều chỉnh vị trí bottom */
+    left: 50%;
+    /* Điều chỉnh vị trí left */
+    transform: translateX(-50%);
+    /* Dịch chuyển vị trí theo chiều ngang */
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 18px;
+    /* Điều chỉnh kích thước font chữ */
+    font-weight: 600;
+    background-color: #191f25;
+    /* Màu nền */
+    color: #fff;
+    /* Màu chữ */
+    z-index: 9999;
+}
+
+
+#open-form-btn:hover {
+    background-color: yellow;
+    color: #ca2929;
+    transition: 0.5s;
+}
+
+#Signup-btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: #ee5677;
+    border: none;
+}
+
+#Signup-btn:hover {
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#close-btn {
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #ccc;
+}
+
+.container-tutor {
+    position: relative;
+    width: 50%;
+    height: 950px;
+    margin: 30px auto 350px;
+    text-align: center;
+}
+
+.container-tutor .flex-box {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: last baseline;
+    text-align: left;
+    margin-right: 120px;
+    flex-wrap: wrap;
+}
+
+
+.tutor {
+    position: absolute;
+    width: 100%;
+    min-width: 600px;
+    top: 80px;
+    /* border: 1px solid black; */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* .tutor span {
+    position: relative;
+    top: 30px;
+    right: 196px;
+    margin-left: 10px;
+    font-weight: 600;
+} */
+
+.tutor #title {
+    padding-top: 20px;
+    margin: auto;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.tutor label {
+    margin: 30px 58px 0px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+input[type="file"] {
+    margin-right: 265px;
+}
+
+.tutor input[type="text"],
+input[type="tel"],
+select {
+    width: 80%;
+
+}
+
+.container-tutor #tutor-re {
+    margin: auto 200px;
+    padding-top: 20px;
+    font-size: 27px;
+    font-weight: 600;
+    min-height: 50px;
+    min-width: 200px;
+}
+
+.container-tutor #button {
+    margin: 10px auto;
+}
+
+.container-tutor button {
+    width: 150px;
+    height: 30px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(174, 221, 87);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.container-tutor button:hover {
+    background-color: #888686;
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+@media screen and (max-width: 972px) {
+    .container-intro {
+        width: 90%;
+        min-width: 300px;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+
+    .intro span {
+        min-width: 100px;
+        height: 100px;
+        position: relative;
+        top: 80px;
+        left: 30px;
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: 0.25px;
+    }
+
+    #intro-p {
+        position: relative;
+        width: 300px;
+        min-width: 200px;
+        height: 70px;
+        top: 100px;
+        left: 30px;
+        font-size: 13px;
+        white-space: normal;
+        letter-spacing: 0.5px;
+    }
+
+    .container-intro img {
+        position: relative;
+        top: 50px;
+        right: -10px;
+        width: 50vw;
+        min-width: 300px;
+        height: 90vw;
+        min-height: 200px;
+        margin: 100px auto;
+    }
+
+    .container-benefit {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        min-width: 300px;
+        height: 1200px;
+        margin: 10px auto;
+        margin-bottom: 100px;
+        background-color: #ecf3fd;
+    }
+
+    .container-benefit>span {
+        width: 50vw;
+        min-width: 350px;
+        position: absolute;
+        top: 25px;
+        color: #0373f9;
+        font-size: 24px;
+        font-weight: 600;
+        margin: auto 30.9%;
+        text-align: center;
+    }
+
+    .benefit {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+
+    .benefit>div {
+        width: 92vw;
+    }
+
+    .procedure>div {
+        width: 92vw;
+    }
+
+    .container-procedure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100vw;
+        height: 1200px;
+        min-width: 300px;
+        background-color: #0373f9;
+        margin: 10px auto;
+    }
+
+
+    .container-procedure>span {
+        width: 50vw;
+        margin: auto 34%;
+        position: absolute;
+        top: 40px;
+        /* border: 1px solid black; */
+        font-size: 27px;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+    }
+
+    .procedure {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* TUTOR */
+    .container-tutor {
+        position: relative;
+        width: 50vw;
+        height: 1100px;
+        margin: 30px auto 350px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: first baseline;
+        align-items: center;
+    }
+
+
+    .tutor {
+        position: absolute;
+        width: 90vw;
+        min-width: 300px;
+        top: 80px;
+        /* border: 1px solid black; */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    }
+
+    .confirm {
+        width: 70vw;
+    }
+
+    .container-tutor #tutor-re {
+        margin: 10px auto;
+        padding-top: 20px;
+        font-size: 20px;
+        font-weight: 600;
+        min-height: 50px;
+        min-width: 200px;
+    }
+
+    .flex-box label {
+        font-size: 10px;
+        min-width: 150px;
+    }
+
+    #form-popup {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 40px;
+        /* Tăng giá trị padding để tăng kích thước của form */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+        width: 95vw;
+        /* Tăng giá trị width để tăng kích thước của form */
+        height: 630px;
+        /* Tăng kích thước theo nội dung bên trong */
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    #Signup-btn {
+        /* position: relative;
+        left: 0px; */
+        width: 50%;
+        height: 30px;
+        border-radius: 5px;
+        font-weight: 700;
+        background-color: #ee5677;
+        border: none;
+        position: relative;
+        left: 20vw;
+    }
+
+    #open-form-btn {
+        width: 40vw;
+        /* Điều chỉnh chiều rộng */
+        height: 50px;
+        /* Điều chỉnh chiều cao */
+        border: none;
+        border-radius: 25px;
+        /* Điều chỉnh góc bo tròn */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+        position: fixed;
+        bottom: 20px;
+        /* Điều chỉnh vị trí bottom */
+        left: 50%;
+        /* Điều chỉnh vị trí left */
+        transform: translateX(-50%);
+        /* Dịch chuyển vị trí theo chiều ngang */
+        margin: 0 auto;
+        cursor: pointer;
+        font-size: 15px;
+        /* Điều chỉnh kích thước font chữ */
+        font-weight: 600;
+        background-color: #191f25;
+        /* Màu nền */
+        color: #fff;
+        /* Màu chữ */
+        z-index: 9999;
+    }
+
+    #form-popup > input[type="text"],
+    input[type="tel"],
+    select{
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 5px;
+
+        /* Đảm bảo kích thước của ô input và select tính cả border và padding */
+    }
+}
