@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-kn&#_p+1k$8m!pydazu2ovint0r(^*$&t47wcgwgx74mb=8h4(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 # Application definition
 
@@ -125,6 +125,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIR = [
     os.path.join(BASE_DIR, 'static')
 ]
+STATIC_ROOT = os.path.join(STATIC_URL, 'staticfiles_build', 'static')
 
 MEDIA_URL = '/img/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'app1/static/img')
@@ -139,7 +140,7 @@ EMAIL_HOST_PASSWORD = 'kwnw lkkf nmfx qboz'
 ALLOWED_HOSTS = []
 
 # VNPAY CONFIG
-VNPAY_RETURN_URL = 'http://localhost:8111/payment_return'  # get from config
+VNPAY_RETURN_URL = 'http://localhost:8000/payment_return'  # get from config
 VNPAY_PAYMENT_URL = 'https://sandbox.vnpayment.vn/paymentv2/vpcpay.html'  # get from config
 VNPAY_API_URL = 'https://sandbox.vnpayment.vn/merchant_webapi/api/transaction'
 VNPAY_TMN_CODE = '1WYM9Y7G'  # Website ID in VNPAY System, get from config
