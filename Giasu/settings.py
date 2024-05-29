@@ -81,6 +81,18 @@ WSGI_APPLICATION = 'Giasu.wsgi.application'
 #     }
 # }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'RQLyzHHVOHPGDUhJubWAdcZldpHcZUzb',
+        'HOST': 'viaduct.proxy.rlwy.net',
+        'PORT': '16517',
+    }
+}
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
