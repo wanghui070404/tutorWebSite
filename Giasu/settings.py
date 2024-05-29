@@ -125,7 +125,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIR = [
     os.path.join(BASE_DIR, 'static')
 ]
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 MEDIA_URL = '/img/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'app1/static/img')
@@ -137,7 +137,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'maixuanhuy1710@gmail.com'
 EMAIL_HOST_PASSWORD = 'kwnw lkkf nmfx qboz'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
 
 # VNPAY CONFIG
 VNPAY_RETURN_URL = 'http://localhost:8000/payment_return'  # get from config
