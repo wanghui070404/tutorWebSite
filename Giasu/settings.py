@@ -144,7 +144,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'maixuanhuy1710@gmail.com'
 EMAIL_HOST_PASSWORD = 'kwnw lkkf nmfx qboz'
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
+# ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
 
 # VNPAY CONFIG
 VNPAY_RETURN_URL = 'http://localhost:8000/payment_return'  # get from config
