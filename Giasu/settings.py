@@ -21,19 +21,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
+#for domain deploy
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+# SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # 'django-insecure-kn&#_p+1k$8m!pydazu2ovint0r(^*$&t47wcgwgx74mb=8h4('
 
+#for domain deploy
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', "False").lower() == 'true'
+# DEBUG = os.environ.get('DEBUG', "False").lower() == 'true'
 
-# SECRET_KEY = 'django-insecure-kn&#_p+1k$8m!pydazu2ovint0r(^*$&t47wcgwgx74mb=8h4('
-# DEBUG = True
-# ALLOWED_HOSTS = []
+SECRET_KEY = 'django-insecure-kn&#_p+1k$8m!pydazu2ovint0r(^*$&t47wcgwgx74mb=8h4('
+DEBUG = True
+ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
+#for domain deploy
+# ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 
 # Application definition
 
@@ -88,8 +91,9 @@ DATABASES = {
     }
 }
 
-database_url = os.environ.get('DATABASE_URL')
-DATABASES["default"] = dj_database_url.parse(database_url)
+#for domain deploy
+# database_url = os.environ.get('DATABASE_URL')
+# DATABASES["default"] = dj_database_url.parse(database_url)
 #postgres://django_render_djkg_user:lDzCzR8N6x05imUv0vX9C7AnbKefoz2C@dpg-cpbn0h4f7o1s7383eang-a.oregon-postgres.render.com/django_render_djkg
 
 
@@ -150,7 +154,9 @@ EMAIL_HOST_PASSWORD = 'kwnw lkkf nmfx qboz'
 
 
 # VNPAY CONFIG
-VNPAY_RETURN_URL = 'https://tutorwebsite.onrender.com/payment_return'  # get from config
+VNPAY_RETURN_URL = 'http://localhost:8000/payment_return'  # get from config
+#for domain deploy
+# VNPAY_RETURN_URL = 'https://tutorwebsite.onrender.com/payment_return'  # get from config
 VNPAY_PAYMENT_URL = 'https://sandbox.vnpayment.vn/paymentv2/vpcpay.html'  # get from config
 VNPAY_API_URL = 'https://sandbox.vnpayment.vn/merchant_webapi/api/transaction'
 VNPAY_TMN_CODE = '1WYM9Y7G'  # Website ID in VNPAY System, get from config
