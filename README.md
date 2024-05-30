@@ -5,11 +5,16 @@ Building a tutor web using HTML CSS JS for front-end and Python Django for back-
 
 Danh sách thành viên
 
-Mai Xuân Huy - 22520553.
-Lê Triệu Phú - 22521100.
-Bùi Châu Thống - 22521428.
-Lê Bá Phúc - 22521115.
-Võ Minh Tùng - 22521623.
+Mai Xuân Huy - 22520553
+
+Lê Triệu Phú - 22521100
+
+Bùi Châu Thống - 22521428
+
+Lê Bá Phúc - 22521115
+
+Võ Minh Tùng - 22521623
+
 
 Tên đề tài: Web tìm kiếm gia sư. 
 
