@@ -12,8 +12,8 @@
   </head>
 
   {% for message in messages %}
-    <div role="alert" style="text-align: center; margin-top: 10px;">
-      <strong style="font-weight: 600;">Lỗi:</strong> {{ message }}
+    <div role="alert" style="background-color: #FFFF66; padding: 10px; margin-bottom: 5px; border-radius: 5px; font-weight: 600;">
+      <strong><i class="fa-solid fa-message"></i></strong> {{ message }}
     </div>
   {% endfor %}
   <body>

@@ -24,10 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-#'django-insecure-kn&#_p+1k$8m!pydazu2ovint0r(^*$&t47wcgwgx74mb=8h4('
+# 'django-insecure-kn&#_p+1k$8m!pydazu2ovint0r(^*$&t47wcgwgx74mb=8h4('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', "False").lower() == 'true'
+
+# SECRET_KEY = 'django-insecure-kn&#_p+1k$8m!pydazu2ovint0r(^*$&t47wcgwgx74mb=8h4('
+# DEBUG = True
+# ALLOWED_HOSTS = []
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS').split(' ')
 
@@ -113,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'vi'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Ho_Chi_Minh'
 
 USE_I18N = True
 
@@ -144,7 +148,6 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'maixuanhuy1710@gmail.com'
 EMAIL_HOST_PASSWORD = 'kwnw lkkf nmfx qboz'
 
-# ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
 
 # VNPAY CONFIG
 VNPAY_RETURN_URL = 'https://tutorwebsite.onrender.com/payment_return'  # get from config
