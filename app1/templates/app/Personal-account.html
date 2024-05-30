@@ -40,6 +40,11 @@
 {% endblock %}
 
 {% block content %}
+  {% for message in messages %}
+    <div role="alert" style="text-align: center; margin-top: 10px;">
+      <strong style="font-weight: 600;">Lỗi:</strong> {{ message }}
+    </div>
+  {% endfor %}
   <div class="container">
     <div class="container-account" style="min-width: 143px;">
       <div class="account" style="padding-bottom: 10px;">
@@ -93,16 +98,16 @@
         {% csrf_token %}
         <div class="Name">
           <label for="name" style="display: block;">HỌ TÊN</label>
-          <input type="text" id="name" name="name" placeholder="Vd: Nguyễn Văn A"/>
+          <input type="text" id="name" name="name" placeholder="Vd: Nguyễn Văn A" />
         </div>
         <div class="phone-email">
           <div class="Phone">
             <label for="phone" style="display: block;">SỐ ĐIỆN THOẠI</label>
-            <input type="text" id="phone" name="phone" placeholder="0977638421"/>
+            <input type="text" id="phone" name="phone" placeholder="0977638421" />
           </div>
           <div class="School">
             <label for="school" style="display: block;">TRƯỜNG</label>
-            <input type="text" id="school" name="school" placeholder="Đại học công nghệ thông tin"/>
+            <input type="text" id="school" name="school" placeholder="Đại học công nghệ thông tin" />
           </div>
         </div>
         <div class="sex-date">
@@ -115,16 +120,16 @@
           </div>
           <div class="Date">
             <label for="avatar" style="display: block;">ẢNH ĐẠI DIỆN</label>
-            <input type="file" id="avatar" name="avatar"/>
+            <input type="file" id="avatar" name="avatar" />
           </div>
         </div>
         <div class="Address">
           <label for="current-address" style="display: block;">ĐỊA CHỈ</label>
-          <input type="text" id="current-address" name="current-address" placeholder="Khu phố 6, quận Linh Trung, thành phố Thủ Đức"/>
+          <input type="text" id="current-address" name="current-address" placeholder="Khu phố 6, quận Linh Trung, thành phố Thủ Đức" />
         </div>
         <div class="introduction">
           <label for="introduction" style="display: block;">GIỚI THIỆU</label>
-          <textarea name="introduction" id="introduction" cols="69" rows="10" ></textarea>
+          <textarea name="introduction" id="introduction" cols="69" rows="10"></textarea>
         </div>
         <button type="submit">CẬP NHẬT</button>
       </form>
