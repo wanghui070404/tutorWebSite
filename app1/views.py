@@ -53,10 +53,10 @@ def signup_in(request):
                 myuser = User.objects.create_user(username, email, pass1)
                 myuser.save()
 
-                messages.success(request, "Successfully!")
+                messages.success(request, "Đăng ký thành công!")
                 return redirect('signup_in')     
             else:
-                messages.error(request, "Wrong!")
+                messages.error(request, "Đăng ký không thành công!")
                 
           
         elif "login" in request.POST:
@@ -77,7 +77,7 @@ def signup_in(request):
                 return redirect('home')
 
             else: 
-                messages.error(request, "Wrong!")
+                messages.error(request, "Lỗi đăng nhập! Tên tài khoản hoặc mật khẩu sai!")
                 return redirect('signup_in')
     return render(request, "app/login.html")
 
