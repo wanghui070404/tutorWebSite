@@ -43,6 +43,12 @@ def signup_in(request):
             email = request.POST['email']
             pass1 = request.POST['pass1']
             pass2 = request.POST['pass2']
+            if User.objects.filter(username=username).exists():
+                messages.error(request, "Tên người dùng đã tồn tại!")
+                return redirect('signup_in')
+            if User.objects.filter(email=email).exists():
+                messages.error(request, "Email đã tồn tại!")
+                return redirect('signup_in')
             if pass1 == pass2:
                 myuser = User.objects.create_user(username, email, pass1)
                 myuser.save()

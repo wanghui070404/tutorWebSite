@@ -12,9 +12,8 @@
   </head>
 
   {% for message in messages %}
-    <div role="alert">
-      <strong>Message</strong> {{ message }}
-      <button type="button" data-dismis="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <div role="alert" style="text-align: center; margin-top: 10px;">
+      <strong style="font-weight: 600;">Lỗi:</strong> {{ message }}
     </div>
   {% endfor %}
   <body>
