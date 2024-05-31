@@ -2,7 +2,8 @@
 Building a tutor web using HTML CSS JS for front-end and Python Django for back-end
 
 
-![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/bf4c0e3b-7085-49bd-ae87-4716ae13b512)
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/829d4ff7-c9ec-4487-a814-8562d8b295ea)
+
 
 
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/62b44254-f903-4846-94b8-65cf1b6dcc46)
