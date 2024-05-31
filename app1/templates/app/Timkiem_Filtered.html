@@ -45,6 +45,7 @@
     </div>
   </header>
   <div class="grid" style="background-color:var(--white-color)">
+    {% if tutors %}
     <p class="category-heading">GIA SƯ CỦA CHÚNG TÔI</p>
     <div class="grid_row">
       {% for tutor in tutors %}
@@ -101,10 +102,11 @@
               </div>
             </div>
           </div>
-        {% else %}
-          <p style="font-size: 30px; position: relative; color: red;">Oái, không tìm thấy gia sư nào phù hợp cả!</p>
         {% endif %}
       {% endfor %}
+      {% else %}
+          <p style="font-size: 30px; position: relative; color: red;">Oái, không tìm thấy gia sư nào phù hợp cả!</p>
+      {% endif %}
     </div>
   </div>
 {% endblock %}
