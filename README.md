@@ -100,7 +100,7 @@ do đã thay đổi database của trang web để deploy trên render
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/9d7652b7-e685-4f1d-a2c2-ecc91df71662)
 
 
-CÁC TÀI KHOẢN TEST:
+TÀI KHOẢN TEST TRÊN WEBSITE ĐÃ DEPLOY
 - TÀI KHOẢN ĐĂNG NHẬP: User: Thong; Pass: 123.
 - TÀI KHOẢN TEST PAYMENT: Ngân hàng: NCB; Số thẻ: 9704198526191432198; Tên chủ thẻ: NGUYEN VAN A; Ngày phát hành 07\15; OTP: 123456.
 
