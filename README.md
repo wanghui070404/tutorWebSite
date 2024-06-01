@@ -80,6 +80,19 @@ CÁC TÍNH NĂNG TRÊN WEB TUTOR:
 - Payment:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/d1c8eadd-80f2-4110-b391-747745912db6)
 
+
+TIÊU CHÍ CỘNG ĐIỂM 
+-	Sử dụng AJAX
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/7b2cacb5-eb94-45e0-b19c-8613b36aefa2)
+- AI integrated (chatbot)
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/cb895145-c355-4960-bdba-bd5f40ce0805)
+-	Video seminar > 1K views và > 100 likes
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/42f3daf3-13ed-4d2c-8fb5-0d9bb915dd61)
+-	Domain deploy
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/4c97808b-7b5c-455d-8203-e21448fa0242)
+
+
+
 CÁC TÀI KHOẢN TEST:
 - TÀI KHOẢN ĐĂNG NHẬP: User: Thong; Pass: 123.
 - TÀI KHOẢN TEST PAYMENT: Ngân hàng: NCB; Số thẻ: 9704198526191432198; Tên chủ thẻ: NGUYEN VAN A; Ngày phát hành 07\15; OTP: 123456.
