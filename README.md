@@ -1,4 +1,6 @@
 # tutorWebSite
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/24e2fc57-d7c9-43d5-9f27-dcc740fcad3f)
+
 Building a tutor web using HTML CSS JS for front-end and Python Django for back-end
 
 
@@ -22,8 +24,36 @@ Lê Bá Phúc - 22521115
 
 Võ Minh Tùng - 22521623
 
+CÔNG CỤ:
+
+- JavaScript
+- Python
+- HTML/CSS
+- Django
+- Bootstrap
+- SQLite
+
 
 LINK DOMAIN DEPLOY: https://tutorweb.onrender.com
+
+HƯỚNG DẪN SETUP MÔI TRƯỜNG VÀ KHỞI CHẠY:
+-Cài đặt môi trường python mới nhất.
+-Giải nén và mở project bằng VS Code.
+-Lệnh pip install -r requirements.txt để tải gói tài nguyên
+-Lệnh python manage.py migrate để cập nhật cho phần setting.
+-Lệnh python manage.py runserver để khởi chạy, tạo server ảo.
+
+
+Các tính năng nổi bật của Web Tutor:
+- Chatbox.
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/667e693c-e6ed-4b41-b7ce-c1620a6fac4f)
+- Chat.
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/a8fda333-1b3e-4118-a0d0-ffe99449819e)
+
+
+  
+
+
 
 
 
