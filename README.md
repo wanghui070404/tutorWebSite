@@ -33,11 +33,21 @@ Building a tutor web using HTML CSS JS for front-end and Python Django for back-
 LINK DOMAIN DEPLOY: https://tutorweb.onrender.com
 
 HƯỚNG DẪN SETUP MÔI TRƯỜNG VÀ KHỞI CHẠY:
-- Cài đặt môi trường python mới nhất.
-- Giải nén và mở project bằng VS Code.
-- Lệnh pip install -r requirements.txt để tải gói tài nguyên
-- Lệnh python manage.py migrate để cập nhật cho phần setting.
-- Lệnh python manage.py runserver để khởi chạy, tạo server ảo.
+- Clone project từ repository
+   + git clone <repository_url>
+- Sử dụng câu lệnh sau để chuyển tới thư mục chưa project
+   + cd <project_directory>
+- Thiết lập virtual environment bằng cách sử dụng các câu lệnh sau
+   + python3 -m venv myenv
+   + source myenv/bin/activate
+   + pip install -r requirements.txt
+- Thiết lập các biến môi trường (ENV variables)
+   + Sử dụng .env file hoặc thiết lập trực tiếp trong hệ thống
+- Chạy migration và collect static files
+   + python manage.py migrate
+   + python manage.py collectstatic
+- Cuối cùng sử dụng câu lệnh sau để khởi chạy project (localhost)
+   + python manage.py runserver
 
 
 CÁC TÍNH NĂNG TRÊN WEB TUTOR:
