@@ -14,6 +14,8 @@ DANH SÁCH THÀNH VIÊN:
 - Võ Minh Tùng - 22521623
 
 - Link demo web: https://linkxink.net/k1ucg
+
+
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/24e2fc57-d7c9-43d5-9f27-dcc740fcad3f)
 
 Building a tutor web using HTML CSS JS for front-end and Python Django for back-end
@@ -55,6 +57,16 @@ CÁC TÍNH NĂNG TRÊN WEB TUTOR:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/165bbd9d-2af3-4eb1-8ed5-84eb4e8454e1)
 - Forgot Password:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/5dff64fb-4dd1-4417-84d6-26f749881bc8)
+- Update a new Password
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/0f8b089e-086f-4727-ac88-8cfd005bf849)
+- Update information of a tutor
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/9bf71655-b3e1-41eb-8ba3-1440d965e0e0)
+- Registration for tutors
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/2a9e45c3-bcb0-47bf-bb26-39af8bc010e7)
+- Send requirement for tutor counselling finding
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/2e63ee02-0255-4567-86ef-c8ec0c64c36f)
+- Update avatar
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/2b50ec38-1275-45c3-814f-71c5b575bd26)
 - Register for a tutor account:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/f5ffd89a-5b16-4449-9d11-0ced3c78be65)
 - Find Tutors:
