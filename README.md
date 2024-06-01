@@ -71,7 +71,7 @@ CÁC TÍNH NĂNG TRÊN WEB TUTOR:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/1b473cb6-3c23-4a20-8f1e-4f8f15253ebe)
 - Learning Resources:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/4e280cb5-bb08-413b-bbfc-8875b4b2db96)
-- Chatbox:
+- Chatbot:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/667e693c-e6ed-4b41-b7ce-c1620a6fac4f)
 - Chat:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/a8fda333-1b3e-4118-a0d0-ffe99449819e)
