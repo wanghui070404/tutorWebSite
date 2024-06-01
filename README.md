@@ -44,7 +44,7 @@ HƯỚNG DẪN SETUP MÔI TRƯỜNG VÀ KHỞI CHẠY:
 - Lệnh python manage.py runserver để khởi chạy, tạo server ảo.
 
 
-Các tính năng nổi bật của Web Tutor:
+CÁC TÍNH NĂNG NỔI BẬT TRÊN WEB TUTOR:
 - Chatbox.
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/667e693c-e6ed-4b41-b7ce-c1620a6fac4f)
 - Chat.
@@ -54,8 +54,11 @@ Các tính năng nổi bật của Web Tutor:
 - Comments
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/bbc1232d-aece-422c-98d2-ee86847f8809)
 - Payment
-- ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/ea410b11-9b53-478c-9474-cd45f00dc97c)
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/d1c8eadd-80f2-4110-b391-747745912db6)
+
+CÁC TÀI KHOẢN TEST:
+- TÀI KHOẢN ĐĂNG NHẬP: User: Thong; Pass: 123.
+- TÀI KHOẢN TEST PAYMENT: Ngân hàng: NCB; Số thẻ: 9704198526191432198; Tên chủ thẻ: NGUYEN VAN A; Ngày phát hành 07\15; OTP: 123456.
 
 
 
