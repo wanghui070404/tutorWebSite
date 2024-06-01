@@ -49,6 +49,17 @@ Các tính năng nổi bật của Web Tutor:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/667e693c-e6ed-4b41-b7ce-c1620a6fac4f)
 - Chat.
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/a8fda333-1b3e-4118-a0d0-ffe99449819e)
+- Find Tutors.
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/1b473cb6-3c23-4a20-8f1e-4f8f15253ebe)
+- Comments
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/bbc1232d-aece-422c-98d2-ee86847f8809)
+- Payment
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/ea410b11-9b53-478c-9474-cd45f00dc97c)
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/d1c8eadd-80f2-4110-b391-747745912db6)
+
+
+
+
 
 
   
