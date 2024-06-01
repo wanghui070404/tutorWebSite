@@ -61,12 +61,16 @@ CÁC TÍNH NĂNG TRÊN WEB TUTOR:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/0f8b089e-086f-4727-ac88-8cfd005bf849)
 - Update information of a tutor
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/9bf71655-b3e1-41eb-8ba3-1440d965e0e0)
++ If status = 1 => Update information form is approved
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/b1cb26bc-f0e8-455e-a235-60e93ae689b5)
 - Send requirement for tutor counselling finding
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/2e63ee02-0255-4567-86ef-c8ec0c64c36f)
 - Update avatar
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/2b50ec38-1275-45c3-814f-71c5b575bd26)
 - Register for a tutor account:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/f5ffd89a-5b16-4449-9d11-0ced3c78be65)
++ If status = 1 => registration form is approved
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/80bf62c9-6611-467d-b3f7-1f3cf59ea378)
 - Find Tutors:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/1b473cb6-3c23-4a20-8f1e-4f8f15253ebe)
 - Learning Resources:
@@ -91,6 +95,9 @@ TIÊU CHÍ CỘNG ĐIỂM
 -	Domain deploy
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/4c97808b-7b5c-455d-8203-e21448fa0242)
 
+!Lưu ý: Khi sử dụng tính năng đăng ký làm gia sư hay thay đổi thông tin đăng ký gia sư trên website đã deploy thì phải đợi admin duyệt chứ không thể vào trang admin của django admin để kiểm tra được, 
+do đã thay đổi database của trang web để deploy trên render
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/9d7652b7-e685-4f1d-a2c2-ecc91df71662)
 
 
 CÁC TÀI KHOẢN TEST:
