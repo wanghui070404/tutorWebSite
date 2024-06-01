@@ -1,4 +1,4 @@
-# tutorWebSite
+# TUTORWebSite
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/24e2fc57-d7c9-43d5-9f27-dcc740fcad3f)
 
 Building a tutor web using HTML CSS JS for front-end and Python Django for back-end
