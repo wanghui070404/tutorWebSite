@@ -11,18 +11,12 @@ Building a tutor web using HTML CSS JS for front-end and Python Django for back-
 
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/62b44254-f903-4846-94b8-65cf1b6dcc46)
 
-Danh sách thành viên
-
-
-Mai Xuân Huy - 22520553
-
-Lê Triệu Phú - 22521100
-
-Bùi Châu Thống - 22521428
-
-Lê Bá Phúc - 22521115
-
-Võ Minh Tùng - 22521623
+DANH SÁCH THÀNH VIÊN:
+- Mai Xuân Huy - 22520553
+- Lê Triệu Phú - 22521100
+- Bùi Châu Thống - 22521428
+- Lê Bá Phúc - 22521115
+- Võ Minh Tùng - 22521623
 
 CÔNG CỤ:
 
