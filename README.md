@@ -61,8 +61,6 @@ CÁC TÍNH NĂNG TRÊN WEB TUTOR:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/0f8b089e-086f-4727-ac88-8cfd005bf849)
 - Update information of a tutor
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/9bf71655-b3e1-41eb-8ba3-1440d965e0e0)
-- Registration for tutors
-![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/2a9e45c3-bcb0-47bf-bb26-39af8bc010e7)
 - Send requirement for tutor counselling finding
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/2e63ee02-0255-4567-86ef-c8ec0c64c36f)
 - Update avatar
