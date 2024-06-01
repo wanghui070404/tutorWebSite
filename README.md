@@ -37,11 +37,11 @@ CÔNG CỤ:
 LINK DOMAIN DEPLOY: https://tutorweb.onrender.com
 
 HƯỚNG DẪN SETUP MÔI TRƯỜNG VÀ KHỞI CHẠY:
--Cài đặt môi trường python mới nhất.
--Giải nén và mở project bằng VS Code.
--Lệnh pip install -r requirements.txt để tải gói tài nguyên
--Lệnh python manage.py migrate để cập nhật cho phần setting.
--Lệnh python manage.py runserver để khởi chạy, tạo server ảo.
+- Cài đặt môi trường python mới nhất.
+- Giải nén và mở project bằng VS Code.
+- Lệnh pip install -r requirements.txt để tải gói tài nguyên
+- Lệnh python manage.py migrate để cập nhật cho phần setting.
+- Lệnh python manage.py runserver để khởi chạy, tạo server ảo.
 
 
 Các tính năng nổi bật của Web Tutor:
