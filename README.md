@@ -30,16 +30,6 @@ Building a tutor web using HTML CSS JS for front-end and Python Django for back-
 
 
 
-CÔNG CỤ:
-
-- JavaScript
-- Python
-- HTML/CSS
-- Django
-- Bootstrap
-- SQLite
-
-
 LINK DOMAIN DEPLOY: https://tutorweb.onrender.com
 
 HƯỚNG DẪN SETUP MÔI TRƯỜNG VÀ KHỞI CHẠY:
