@@ -38,16 +38,26 @@ HƯỚNG DẪN SETUP MÔI TRƯỜNG VÀ KHỞI CHẠY:
 - Lệnh python manage.py runserver để khởi chạy, tạo server ảo.
 
 
-CÁC TÍNH NĂNG NỔI BẬT TRÊN WEB TUTOR:
-- Chatbox.
-![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/667e693c-e6ed-4b41-b7ce-c1620a6fac4f)
-- Chat.
-![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/a8fda333-1b3e-4118-a0d0-ffe99449819e)
-- Find Tutors.
+CÁC TÍNH NĂNG TRÊN WEB TUTOR:
+- Login:
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/d5ab8955-2487-44cd-bb5d-7897365b06bb)
+- Signup:
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/165bbd9d-2af3-4eb1-8ed5-84eb4e8454e1)
+- Forgot Password:
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/5dff64fb-4dd1-4417-84d6-26f749881bc8)
+- Register for a tutor account:
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/f5ffd89a-5b16-4449-9d11-0ced3c78be65)
+- Find Tutors:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/1b473cb6-3c23-4a20-8f1e-4f8f15253ebe)
-- Comments
+- Learning Resources:
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/4e280cb5-bb08-413b-bbfc-8875b4b2db96)
+- Chatbox:
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/667e693c-e6ed-4b41-b7ce-c1620a6fac4f)
+- Chat:
+![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/a8fda333-1b3e-4118-a0d0-ffe99449819e)
+- Comments:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/bbc1232d-aece-422c-98d2-ee86847f8809)
-- Payment
+- Payment:
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/d1c8eadd-80f2-4110-b391-747745912db6)
 
 CÁC TÀI KHOẢN TEST:
