@@ -1,5 +1,5 @@
 # TUTORWebSite
-- Link demo web: https://drive.google.com/file/d/1sKWsdvjSR7jDRCj1P_crApyqYwjS7oLT/view?usp=sharing
+- Link demo web: https://linkxink.net/k1ucg
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/163686506/24e2fc57-d7c9-43d5-9f27-dcc740fcad3f)
 
 Building a tutor web using HTML CSS JS for front-end and Python Django for back-end
