@@ -105,8 +105,53 @@ TÀI KHOẢN TEST TRÊN WEBSITE ĐÃ DEPLOY
 - TÀI KHOẢN TEST PAYMENT: Ngân hàng: NCB; Số thẻ: 9704198526191432198; Tên chủ thẻ: NGUYEN VAN A; Ngày phát hành 07\15; OTP: 123456.
 
 
+1. Giải thích kiến trúc của Django, cách hoạt động như nào? (Model, View, Template)
+- Kiến trúc của Django và cách hoạt động (Model, View, Template)
++ Django là một framework web của Python, dựa trên nguyên tắc MVC (Model-View-Controller), nhưng trong Django nó được gọi là MVT (Model-View-Template). Dưới đây là mô tả chi tiết về cách hoạt động của từng thành phần:
+
++ Model: Làm việc với cơ sở dữ liệu, quản lý dữ liệu ứng dụng. Các lớp Model trong Django định nghĩa cấu trúc của dữ liệu và các thao tác liên quan như truy vấn, cập nhật. Mỗi lớp Model đại diện cho một bảng trong cơ sở dữ liệu.
+
++ View: Chứa logic xử lý yêu cầu và trả về phản hồi. View nhận các yêu cầu từ người dùng, tương tác với Model để lấy dữ liệu cần thiết và sau đó gửi dữ liệu này tới Template để hiển thị.
+
++ Template: Định nghĩa cách dữ liệu được hiển thị ra cho người dùng. Template là các file HTML chứa các biến và biểu thức Django Template Language (DTL), cho phép bạn chèn dữ liệu từ View vào HTML.
+
+- Quy trình hoạt động:
+
++ Người dùng gửi một yêu cầu (request) đến máy chủ Django.
++ Django xác định view phù hợp với yêu cầu dựa trên URL routing.
++ View xử lý logic cần thiết, tương tác với Model để truy xuất hoặc cập nhật dữ liệu.
++ View gửi dữ liệu tới Template để tạo ra trang HTML.
++ Template tạo trang HTML và trả về cho người dùng dưới dạng phản hồi (response).
 
 
+2. Tại sao nên dùng Django? Có dễ hack vào web chạy framework này không? Có bao nhiêu CVE về Django năm rồi?
+- Lý do nên dùng Django:
+   + Phát triển nhanh: Django cung cấp nhiều công cụ và thư viện sẵn có, giúp rút ngắn thời gian phát triển.
+   + An toàn: Django có các tính năng bảo mật tích hợp để chống lại các tấn công phổ biến như SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF).
+   + Khả năng mở rộng: Django có khả năng mở rộng tốt, phù hợp với cả các dự án nhỏ và lớn.
+   + Cộng đồng lớn: Django có một cộng đồng lớn và tài liệu phong phú, giúp dễ dàng tìm kiếm hỗ trợ và học hỏi.
+- An ninh và các lỗ hổng CVE
+  Django là một framework an toàn, tuy nhiên không thể đảm bảo an toàn tuyệt đối. Số lượng CVE (Common Vulnerabilities and Exposures) trong một năm có thể dao động. Theo thông tin gần nhất, năm 2023, 
+  Django có khoảng 4 CVE được ghi nhận . Để đảm bảo an toàn, việc cập nhật thường xuyên và tuân theo các hướng dẫn bảo mật là rất quan trọng.
+
+3. Đi làm Dev Django lương bao nhiêu củ 1 tháng?
+   Mức lương của một Developer Django có thể thay đổi tùy theo khu vực, kinh nghiệm và quy mô công ty. Dưới đây là một ước tính trung bình:
+   
+   Junior Developer (ít hơn 2 năm kinh nghiệm): Khoảng 15-25 triệu VND/tháng.
+   Mid-level Developer (2-5 năm kinh nghiệm): Khoảng 25-45 triệu VND/tháng.
+   Senior Developer (hơn 5 năm kinh nghiệm): Có thể từ 45 triệu VND/tháng trở lên.
+
+4. Liệt kê 10 trang web nổi tiếng trên thế giới đang dùng django?
+      - Instagram: Một trong những mạng xã hội phổ biến nhất thế giới.
+      - Spotify: Dịch vụ phát nhạc trực tuyến.
+      - Disqus: Hệ thống bình luận trực tuyến được sử dụng rộng rãi.
+      - Mozilla: Tổ chức phi lợi nhuận đứng sau trình duyệt Firefox.
+      - Pinterest: Mạng xã hội chia sẻ ảnh.
+      - Bitbucket: Nền tảng quản lý mã nguồn.
+      - National Geographic: Trang web của tạp chí nổi tiếng về khoa học và thiên nhiên.
+      - Eventbrite: Nền tảng tổ chức và quản lý sự kiện.
+      - The Washington Post: Một trong những tờ báo lớn nhất của Mỹ.
+      - Dropbox: Dịch vụ lưu trữ và chia sẻ tệp trực tuyến.
 
 
   
