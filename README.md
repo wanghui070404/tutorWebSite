@@ -139,11 +139,11 @@ TRẢ LỜI CÂU HỎI TỪ CÁC NHÓM KHÁC
        Django có khoảng 4 CVE được ghi nhận . Để đảm bảo an toàn, việc cập nhật thường xuyên và tuân theo các hướng dẫn bảo mật là rất quan trọng.
 
 3. Đi làm Dev Django lương bao nhiêu củ 1 tháng?
-      Mức lương của một Developer Django có thể thay đổi tùy theo khu vực, kinh nghiệm và quy mô công ty. Dưới đây là một ước tính trung bình:
+- Mức lương của một Developer Django có thể thay đổi tùy theo khu vực, kinh nghiệm và quy mô công ty. Dưới đây là một ước tính trung bình:
       
-      Junior Developer (ít hơn 2 năm kinh nghiệm): Khoảng 15-25 triệu VND/tháng.
-      Mid-level Developer (2-5 năm kinh nghiệm): Khoảng 25-45 triệu VND/tháng.
-      Senior Developer (hơn 5 năm kinh nghiệm): Có thể từ 45 triệu VND/tháng trở lên.
+      + Junior Developer (ít hơn 2 năm kinh nghiệm): Khoảng 15-25 triệu VND/tháng.
+      + Mid-level Developer (2-5 năm kinh nghiệm): Khoảng 25-45 triệu VND/tháng.
+      + Senior Developer (hơn 5 năm kinh nghiệm): Có thể từ 45 triệu VND/tháng trở lên.
 
 4. Liệt kê 10 trang web nổi tiếng trên thế giới đang dùng django?
       - Instagram: Một trong những mạng xã hội phổ biến nhất thế giới.
