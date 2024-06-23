@@ -15,7 +15,7 @@ from .models import UPDATEINFO
 from .models import COUNSELING, LOADVIDEO
 from .models import Room, Message
 from .form import CommentForm
-from django.db.models import Q
+from django.db.models import Q  
 # from .models import Room, Message
 from django.http import HttpResponse, JsonResponse
 #PAYMENT
@@ -34,6 +34,8 @@ from django.shortcuts import render, redirect
 #from django.utils.http import urlquote
 from app1.models import PaymentForm
 from app1.vnpay import vnpay
+from django.contrib import admin
+from .dll import sign, verify, keygen
 # Create your views here.
 
 def signup_in(request):
@@ -666,6 +668,10 @@ def payment_ipn(request):
 
     return result
 
+
+
+
+
 @login_required
 def payment_return(request):
     inputData = request.GET
@@ -683,16 +689,45 @@ def payment_return(request):
         vnp_BankCode = inputData['vnp_BankCode']
         vnp_CardType = inputData['vnp_CardType']
 
-        payment = PAYMENTRECORD.objects.create(
-            user = user,
-            order_id = order_id,
-            amount = amount,
-            order_desc = order_desc,
-            transaction_no = vnp_TransactionNo,
-            response_code = vnp_ResponseCode,
-        )
+     
         if vnp.validate_response(settings.VNPAY_HASH_SECRET_KEY):
             if vnp_ResponseCode == "00":
+                #Sign the data
+                message = f"{user}|{order_id}|{amount}|{order_desc}|{vnp_TransactionNo}|{vnp_ResponseCode}"
+                message = message.encode('utf-8')
+                privatekey = 'C:\\Savekey\\private.bin'
+                privatekey = privatekey.encode('utf-8')
+                publickey = keygen(privatekey)
+                signature = sign(message, privatekey)
+              
+                # with open('C:\\Savekey\\public_key.bin', 'w') as f:
+                #     f.write(f"Public Key: {publickey}\n")
+
+                # with open('C:\\Savekey\\signature.bin', 'w') as f:
+                #     f.write(f"Signature: {signature}\n")
+                status = ''
+                
+                if verify(message, signature, publickey) == True:
+                    status = "Valid"
+                else: 
+                    status = "Invalid"
+                payment = PAYMENTRECORD.objects.create(
+                    user = user,
+                    order_id = order_id,
+                    amount = amount,
+                    order_desc = order_desc,
+                    transaction_no = vnp_TransactionNo,
+                    response_code = vnp_ResponseCode,
+                    publickey = publickey,
+                    signature = signature,
+                    message = message,
+                    status = status,
+                )
+
+                payment.save()           
+
+
+
                 return render(request, "payment/payment_return.html", {"title": "Kết quả thanh toán",
                                                                "result": "Thành công", "order_id": order_id,
                                                                "amount": amount,

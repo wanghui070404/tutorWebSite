@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from datetime import datetime
 from django import forms
 from django.conf import settings
-
+from .dll import verify
 
 # Create your models here.
 # class TUTOR(models.Model):
@@ -94,7 +94,10 @@ class Message(models.Model):
     user = models.CharField(max_length=1000000)
     room = models.CharField(max_length=1000000)
     
-    
+def verifynew(self, message, publickey, signature):
+    publickey = self.publickey.encode('utf-8')
+    return verify(message, publickey, signature)
+
 class PAYMENTRECORD(models.Model): 
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     order_id = models.CharField(max_length=255)
@@ -102,6 +105,21 @@ class PAYMENTRECORD(models.Model):
     order_desc = models.TextField()
     transaction_no = models.CharField(max_length=255)
     response_code = models.CharField(max_length=10)
+    publickey = models.CharField(max_length=10000, null=True, blank=True)  
+    signature = models.CharField(max_length=10000, null=True, blank=True)
+    message = models.CharField(max_length=255, null=True, blank=True)
+    status = models.CharField(max_length=255, null=True, blank=True)
+
+
+    
+
+    # def verifynew(self, message, publickey, signature): 
+    #     publickey = publickey.encode('utf-8')
+    #     return verify(message, publickey, signature)
+    # def save(self, *args, **kwargs):
+    #     if self.pk:
+    #         self.status = False
+    #     super().save(*args, **kwargs)
     # payment_date = models.DateTimeField(default=timezone.now, blank=True, null=True)
     # bank_code = models.CharField(max_length=10)
     # card_type = models.CharField(max_length=20)
