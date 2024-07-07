@@ -32,6 +32,11 @@ Building a tutor web using HTML CSS JS for front-end and Python Django for back-
 
 LINK DOMAIN DEPLOY: https://tutorweb.onrender.com
 
+LINK DOMAIN DEPLOY (DO LINK BÊN TRÊN ĐÃ QUÁ HẠN VÀO NGÀY 28/06): https://tutorweb-domaindeploy.onrender.com
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/81096739-3f9f-447f-ac1d-a91b905c8f91)
+![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/1c74f429-48b1-4000-a852-920995921fc2)
+
+
 HƯỚNG DẪN SETUP MÔI TRƯỜNG VÀ KHỞI CHẠY:
 - Clone project từ repository
    + git clone <repository_url>
