@@ -34,6 +34,7 @@ LINK DOMAIN DEPLOY: https://tutorweb.onrender.com
 
 LINK DOMAIN DEPLOY (DO LINK BÊN TRÊN ĐÃ QUÁ HẠN VÀO NGÀY 28/06): https://tutorweb-domaindeploy.onrender.com
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/81096739-3f9f-447f-ac1d-a91b905c8f91)
+
 ![image](https://github.com/wanghui070404/tutorWebSite/assets/131352489/1c74f429-48b1-4000-a852-920995921fc2)
 
 
@@ -106,7 +107,7 @@ do đã thay đổi database của trang web để deploy trên render
 
 
 TÀI KHOẢN TEST TRÊN WEBSITE ĐÃ DEPLOY
-- TÀI KHOẢN ĐĂNG NHẬP: User: Thong; Pass: 123.
+- TÀI KHOẢN ĐĂNG NHẬP: User: huy; Pass: 1
 - TÀI KHOẢN TEST PAYMENT: Ngân hàng: NCB; Số thẻ: 9704198526191432198; Tên chủ thẻ: NGUYEN VAN A; Ngày phát hành 07\15; OTP: 123456.
 
 
