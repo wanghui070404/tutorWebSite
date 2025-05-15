@@ -10,8 +10,6 @@ DANH SÁCH THÀNH VIÊN:
 - Mai Xuân Huy - 22520553
 - Lê Triệu Phú - 22521100
 - Bùi Châu Thống - 22521428
-- Lê Bá Phúc - 22521115
-- Võ Minh Tùng - 22521623
 
 - Link demo web: https://linkxink.net/k1ucg
 
